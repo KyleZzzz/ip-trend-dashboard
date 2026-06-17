@@ -1,137 +1,137 @@
 [
   {
+    "id": 248,
+    "name": "Loopy",
+    "category": "韩国IP",
+    "recent_views": 16319948,
+    "daily_avg": 5439982,
+    "growth_rate": 77.6,
+    "heat_level": "爆"
+  },
+  {
     "id": 424,
     "name": "绝区零",
     "category": "游戏",
-    "recent_views": 17649864,
-    "daily_avg": 5883288,
-    "growth_rate": 69.7,
+    "recent_views": 16538494,
+    "daily_avg": 5512831,
+    "growth_rate": 77.1,
     "heat_level": "爆"
   },
   {
     "id": 39,
     "name": "药屋少女",
     "category": "日本动漫",
-    "recent_views": 18128857,
-    "daily_avg": 6042952,
-    "growth_rate": 58.1,
+    "recent_views": 16555186,
+    "daily_avg": 5518395,
+    "growth_rate": 58.3,
     "heat_level": "爆"
   },
   {
     "id": 12,
     "name": "Chiikawa",
     "category": "日本动漫",
-    "recent_views": 25803548,
-    "daily_avg": 8601182,
-    "growth_rate": 51.8,
-    "heat_level": "爆"
-  },
-  {
-    "id": 416,
-    "name": "米大圈",
-    "category": "国潮",
-    "recent_views": 10302331,
-    "daily_avg": 3434110,
-    "growth_rate": 51.5,
+    "recent_views": 26014844,
+    "daily_avg": 8671614,
+    "growth_rate": 52.1,
     "heat_level": "爆"
   },
   {
     "id": 250,
     "name": "黄油小熊",
     "category": "韩国IP",
-    "recent_views": 12056739,
-    "daily_avg": 4018913,
-    "growth_rate": 47.6,
-    "heat_level": "热"
-  },
-  {
-    "id": 37,
-    "name": "葬送的芙莉莲",
-    "category": "日本动漫",
-    "recent_views": 15195170,
-    "daily_avg": 5065056,
-    "growth_rate": 46.6,
-    "heat_level": "热"
-  },
-  {
-    "id": 423,
-    "name": "星穹铁道",
-    "category": "游戏",
-    "recent_views": 15811385,
-    "daily_avg": 5270461,
-    "growth_rate": 44.3,
+    "recent_views": 11561487,
+    "daily_avg": 3853829,
+    "growth_rate": 49.4,
     "heat_level": "热"
   },
   {
     "id": 26,
     "name": "间谍过家家",
     "category": "日本动漫",
-    "recent_views": 11463266,
-    "daily_avg": 3821088,
-    "growth_rate": 39.5,
-    "heat_level": "热"
-  },
-  {
-    "id": 254,
-    "name": "迪士尼",
-    "category": "美国动画",
-    "recent_views": 10563370,
-    "daily_avg": 3521123,
-    "growth_rate": 39.5,
-    "heat_level": "热"
-  },
-  {
-    "id": 418,
-    "name": "原神",
-    "category": "游戏",
-    "recent_views": 19009177,
-    "daily_avg": 6336392,
-    "growth_rate": 37.5,
-    "heat_level": "热"
-  },
-  {
-    "id": 419,
-    "name": "蛋仔派对",
-    "category": "游戏",
-    "recent_views": 11700671,
-    "daily_avg": 3900223,
-    "growth_rate": 28.2,
+    "recent_views": 12431869,
+    "daily_avg": 4143956,
+    "growth_rate": 48.6,
     "heat_level": "热"
   },
   {
     "id": 247,
     "name": "线条小狗",
     "category": "韩国IP",
-    "recent_views": 16076411,
-    "daily_avg": 5358803,
-    "growth_rate": 24.6,
+    "recent_views": 17427721,
+    "daily_avg": 5809240,
+    "growth_rate": 48.5,
     "heat_level": "热"
   },
   {
-    "id": 248,
-    "name": "Loopy",
-    "category": "韩国IP",
-    "recent_views": 13342496,
-    "daily_avg": 4447498,
-    "growth_rate": 22.4,
-    "heat_level": "热"
-  },
-  {
-    "id": 1,
-    "name": "三丽鸥",
+    "id": 14,
+    "name": "蜡笔小新",
     "category": "日本动漫",
-    "recent_views": 14154056,
-    "daily_avg": 4718018,
-    "growth_rate": 20.0,
+    "recent_views": 10121513,
+    "daily_avg": 3373837,
+    "growth_rate": 47.1,
+    "heat_level": "热"
+  },
+  {
+    "id": 418,
+    "name": "原神",
+    "category": "游戏",
+    "recent_views": 18643983,
+    "daily_avg": 6214661,
+    "growth_rate": 47.0,
+    "heat_level": "热"
+  },
+  {
+    "id": 32,
+    "name": "宝可梦",
+    "category": "日本动漫",
+    "recent_views": 11470492,
+    "daily_avg": 3823497,
+    "growth_rate": 46.9,
+    "heat_level": "热"
+  },
+  {
+    "id": 37,
+    "name": "葬送的芙莉莲",
+    "category": "日本动漫",
+    "recent_views": 12664833,
+    "daily_avg": 4221611,
+    "growth_rate": 38.6,
     "heat_level": "热"
   },
   {
     "id": 420,
     "name": "王者荣耀",
     "category": "游戏",
-    "recent_views": 10095786,
-    "daily_avg": 3365262,
-    "growth_rate": 19.1,
+    "recent_views": 12460814,
+    "daily_avg": 4153604,
+    "growth_rate": 29.7,
+    "heat_level": "热"
+  },
+  {
+    "id": 1,
+    "name": "三丽鸥",
+    "category": "日本动漫",
+    "recent_views": 13431082,
+    "daily_avg": 4477027,
+    "growth_rate": 29.2,
+    "heat_level": "热"
+  },
+  {
+    "id": 423,
+    "name": "星穹铁道",
+    "category": "游戏",
+    "recent_views": 14437271,
+    "daily_avg": 4812423,
+    "growth_rate": 25.7,
+    "heat_level": "热"
+  },
+  {
+    "id": 419,
+    "name": "蛋仔派对",
+    "category": "游戏",
+    "recent_views": 10264049,
+    "daily_avg": 3421349,
+    "growth_rate": 21.5,
     "heat_level": "热"
   }
 ]
