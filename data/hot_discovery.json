@@ -1,0 +1,137 @@
+[
+  {
+    "id": 19,
+    "name": "海贼王",
+    "category": "日本动漫",
+    "recent_views": 35295120,
+    "daily_avg": 11765040,
+    "growth_rate": 1000.0,
+    "heat_level": "爆"
+  },
+  {
+    "id": 22,
+    "name": "疾风传",
+    "category": "日本动漫",
+    "recent_views": 34020769,
+    "daily_avg": 11340256,
+    "growth_rate": 1000.0,
+    "heat_level": "爆"
+  },
+  {
+    "id": 18,
+    "name": "航海王",
+    "category": "日本动漫",
+    "recent_views": 21160097,
+    "daily_avg": 7053365,
+    "growth_rate": 1000.0,
+    "heat_level": "爆"
+  },
+  {
+    "id": 21,
+    "name": "火影",
+    "category": "日本动漫",
+    "recent_views": 19277736,
+    "daily_avg": 6425912,
+    "growth_rate": 1000.0,
+    "heat_level": "爆"
+  },
+  {
+    "id": 17,
+    "name": "柯南",
+    "category": "日本动漫",
+    "recent_views": 18113678,
+    "daily_avg": 6037892,
+    "growth_rate": 1000.0,
+    "heat_level": "爆"
+  },
+  {
+    "id": 36,
+    "name": "樱桃小丸子",
+    "category": "日本动漫",
+    "recent_views": 16322966,
+    "daily_avg": 5440988,
+    "growth_rate": 1000.0,
+    "heat_level": "爆"
+  },
+  {
+    "id": 424,
+    "name": "绝区零",
+    "category": "游戏",
+    "recent_views": 16303092,
+    "daily_avg": 5434364,
+    "growth_rate": 59.8,
+    "heat_level": "爆"
+  },
+  {
+    "id": 247,
+    "name": "线条小狗",
+    "category": "韩国IP",
+    "recent_views": 18054550,
+    "daily_avg": 6018183,
+    "growth_rate": 55.7,
+    "heat_level": "爆"
+  },
+  {
+    "id": 39,
+    "name": "药屋少女",
+    "category": "日本动漫",
+    "recent_views": 17046729,
+    "daily_avg": 5682243,
+    "growth_rate": 48.2,
+    "heat_level": "热"
+  },
+  {
+    "id": 12,
+    "name": "Chiikawa",
+    "category": "日本动漫",
+    "recent_views": 26381044,
+    "daily_avg": 8793681,
+    "growth_rate": 47.6,
+    "heat_level": "热"
+  },
+  {
+    "id": 37,
+    "name": "葬送的芙莉莲",
+    "category": "日本动漫",
+    "recent_views": 13366036,
+    "daily_avg": 4455345,
+    "growth_rate": 40.7,
+    "heat_level": "热"
+  },
+  {
+    "id": 248,
+    "name": "Loopy",
+    "category": "韩国IP",
+    "recent_views": 14710461,
+    "daily_avg": 4903487,
+    "growth_rate": 36.3,
+    "heat_level": "热"
+  },
+  {
+    "id": 418,
+    "name": "原神",
+    "category": "游戏",
+    "recent_views": 18328762,
+    "daily_avg": 6109587,
+    "growth_rate": 31.8,
+    "heat_level": "热"
+  },
+  {
+    "id": 1,
+    "name": "三丽鸥",
+    "category": "日本动漫",
+    "recent_views": 14729324,
+    "daily_avg": 4909774,
+    "growth_rate": 26.7,
+    "heat_level": "热"
+  },
+  {
+    "id": 423,
+    "name": "星穹铁道",
+    "category": "游戏",
+    "recent_views": 15153384,
+    "daily_avg": 5051128,
+    "growth_rate": 16.9,
+    "heat_level": "热"
+  }
+]

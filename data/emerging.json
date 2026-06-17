@@ -1,0 +1,162 @@
+[
+  {
+    "ip_name": "米大圈",
+    "category": "国潮",
+    "alert_type": "emerging",
+    "score": 116.0,
+    "description": "米大圈 近期增速70%，新兴IP爆发趋势明显",
+    "detected_at": "2026-06-14 00:00:00"
+  },
+  {
+    "ip_name": "赤猫",
+    "category": "国潮",
+    "alert_type": "emerging",
+    "score": 112.0,
+    "description": "赤猫 近期增速64%，新兴IP爆发趋势明显",
+    "detected_at": "2026-06-16 00:00:00"
+  },
+  {
+    "ip_name": "绝区零",
+    "category": "游戏",
+    "alert_type": "emerging",
+    "score": 108.0,
+    "description": "绝区零 近期增速60%，新兴IP爆发趋势明显",
+    "detected_at": "2026-06-15 00:00:00"
+  },
+  {
+    "ip_name": "药屋少女",
+    "category": "日本动漫",
+    "alert_type": "emerging",
+    "score": 104.0,
+    "description": "药屋少女 近期增速55%，新兴IP爆发趋势明显",
+    "detected_at": "2026-06-17 00:00:00"
+  },
+  {
+    "ip_name": "黑神话悟空",
+    "category": "游戏",
+    "alert_type": "emerging",
+    "score": 104.0,
+    "description": "黑神话悟空 近期增速55%，新兴IP爆发趋势明显",
+    "detected_at": "2026-06-14 00:00:00"
+  },
+  {
+    "ip_name": "Labubu",
+    "category": "潮玩",
+    "alert_type": "emerging",
+    "score": 100.0,
+    "description": "Labubu 近期增速50%，新兴IP爆发趋势明显",
+    "detected_at": "2026-06-16 00:00:00"
+  },
+  {
+    "ip_name": "葬送的芙莉莲",
+    "category": "日本动漫",
+    "alert_type": "emerging",
+    "score": 100.0,
+    "description": "葬送的芙莉莲 近期增速50%，新兴IP爆发趋势明显",
+    "detected_at": "2026-06-14 00:00:00"
+  },
+  {
+    "ip_name": "Chiikawa",
+    "category": "日本动漫",
+    "alert_type": "emerging",
+    "score": 96.0,
+    "description": "Chiikawa 近期增速44%，新兴IP爆发趋势明显",
+    "detected_at": "2026-06-17 00:00:00"
+  },
+  {
+    "ip_name": "卡皮巴拉",
+    "category": "潮流角色",
+    "alert_type": "emerging",
+    "score": 96.0,
+    "description": "卡皮巴拉 近期增速44%，新兴IP爆发趋势明显",
+    "detected_at": "2026-06-14 00:00:00"
+  },
+  {
+    "ip_name": "怪兽8号",
+    "category": "日本动漫",
+    "alert_type": "emerging",
+    "score": 96.0,
+    "description": "怪兽8号 近期增速44%，新兴IP爆发趋势明显",
+    "detected_at": "2026-06-15 00:00:00"
+  },
+  {
+    "ip_name": "黄油小熊",
+    "category": "韩国IP",
+    "alert_type": "emerging",
+    "score": 92.0,
+    "description": "黄油小熊 近期增速39%，新兴IP爆发趋势明显",
+    "detected_at": "2026-06-14 00:00:00"
+  },
+  {
+    "ip_name": "迷宫饭",
+    "category": "日本动漫",
+    "alert_type": "emerging",
+    "score": 92.0,
+    "description": "迷宫饭 近期增速39%，新兴IP爆发趋势明显",
+    "detected_at": "2026-06-16 00:00:00"
+  },
+  {
+    "ip_name": "线条小狗",
+    "category": "韩国IP",
+    "alert_type": "hot",
+    "score": 76.0,
+    "description": "线条小狗 持续热门，增速35%",
+    "detected_at": "2026-06-13 00:00:00"
+  },
+  {
+    "ip_name": "吉伊卡哇",
+    "category": "日本动漫",
+    "alert_type": "hot",
+    "score": 76.0,
+    "description": "吉伊卡哇 持续热门，增速35%",
+    "detected_at": "2026-06-15 00:00:00"
+  },
+  {
+    "ip_name": "蓝色监狱",
+    "category": "日本动漫",
+    "alert_type": "hot",
+    "score": 76.0,
+    "description": "蓝色监狱 持续热门，增速35%",
+    "detected_at": "2026-06-13 00:00:00"
+  },
+  {
+    "ip_name": "Butterbear",
+    "category": "韩国IP",
+    "alert_type": "hot",
+    "score": 76.0,
+    "description": "Butterbear 持续热门，增速35%",
+    "detected_at": "2026-06-15 00:00:00"
+  },
+  {
+    "ip_name": "Loopy",
+    "category": "韩国IP",
+    "alert_type": "hot",
+    "score": 73.0,
+    "description": "Loopy 持续热门，增速30%",
+    "detected_at": "2026-06-14 00:00:00"
+  },
+  {
+    "ip_name": "Jellycat",
+    "category": "潮玩",
+    "alert_type": "hot",
+    "score": 73.0,
+    "description": "Jellycat 持续热门，增速30%",
+    "detected_at": "2026-06-14 00:00:00"
+  },
+  {
+    "ip_name": "我推的孩子",
+    "category": "日本动漫",
+    "alert_type": "hot",
+    "score": 73.0,
+    "description": "我推的孩子 持续热门，增速30%",
+    "detected_at": "2026-06-12 00:00:00"
+  },
+  {
+    "ip_name": "庆余年",
+    "category": "国潮",
+    "alert_type": "hot",
+    "score": 73.0,
+    "description": "庆余年 持续热门，增速30%",
+    "detected_at": "2026-06-12 00:00:00"
+  }
+]

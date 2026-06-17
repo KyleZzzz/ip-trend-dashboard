@@ -1,0 +1,222 @@
+[
+  {
+    "id": 19,
+    "name": "海贼王",
+    "name_en": "",
+    "category": "日本动漫",
+    "total_views": 35295120,
+    "total_videos": 2000,
+    "total_likes": 893047,
+    "search_index": 100.0,
+    "trending_count": 0
+  },
+  {
+    "id": 22,
+    "name": "疾风传",
+    "name_en": "",
+    "category": "日本动漫",
+    "total_views": 34020769,
+    "total_videos": 2000,
+    "total_likes": 707360,
+    "search_index": 100.0,
+    "trending_count": 0
+  },
+  {
+    "id": 418,
+    "name": "原神",
+    "name_en": "",
+    "category": "游戏",
+    "total_views": 22280220,
+    "total_videos": 1393,
+    "total_likes": 1702964,
+    "search_index": 95.8,
+    "trending_count": 0
+  },
+  {
+    "id": 18,
+    "name": "航海王",
+    "name_en": "",
+    "category": "日本动漫",
+    "total_views": 21160097,
+    "total_videos": 2000,
+    "total_likes": 502159,
+    "search_index": 100.0,
+    "trending_count": 0
+  },
+  {
+    "id": 21,
+    "name": "火影",
+    "name_en": "",
+    "category": "日本动漫",
+    "total_views": 19277736,
+    "total_videos": 1000,
+    "total_likes": 344462,
+    "search_index": 100.0,
+    "trending_count": 0
+  },
+  {
+    "id": 423,
+    "name": "星穹铁道",
+    "name_en": "",
+    "category": "游戏",
+    "total_views": 19161165,
+    "total_videos": 1078,
+    "total_likes": 1477626,
+    "search_index": 90.0,
+    "trending_count": 0
+  },
+  {
+    "id": 17,
+    "name": "柯南",
+    "name_en": "",
+    "category": "日本动漫",
+    "total_views": 18113678,
+    "total_videos": 2000,
+    "total_likes": 451595,
+    "search_index": 100.0,
+    "trending_count": 0
+  },
+  {
+    "id": 424,
+    "name": "绝区零",
+    "name_en": "",
+    "category": "游戏",
+    "total_views": 16762387,
+    "total_videos": 1261,
+    "total_likes": 1319463,
+    "search_index": 100.0,
+    "trending_count": 1
+  },
+  {
+    "id": 37,
+    "name": "葬送的芙莉莲",
+    "name_en": "",
+    "category": "日本动漫",
+    "total_views": 16518384,
+    "total_videos": 1102,
+    "total_likes": 1097645,
+    "search_index": 100.0,
+    "trending_count": 0
+  },
+  {
+    "id": 36,
+    "name": "樱桃小丸子",
+    "name_en": "",
+    "category": "日本动漫",
+    "total_views": 16322966,
+    "total_videos": 2000,
+    "total_likes": 314654,
+    "search_index": 100.0,
+    "trending_count": 0
+  },
+  {
+    "id": 39,
+    "name": "药屋少女",
+    "name_en": "",
+    "category": "日本动漫",
+    "total_views": 15521800,
+    "total_videos": 945,
+    "total_likes": 1202237,
+    "search_index": 100.0,
+    "trending_count": 2
+  },
+  {
+    "id": 48,
+    "name": "文豪野犬",
+    "name_en": "",
+    "category": "日本动漫",
+    "total_views": 13278674,
+    "total_videos": 2000,
+    "total_likes": 282997,
+    "search_index": 100.0,
+    "trending_count": 0
+  },
+  {
+    "id": 13,
+    "name": "吉伊卡哇",
+    "name_en": "",
+    "category": "日本动漫",
+    "total_views": 12229992,
+    "total_videos": 2000,
+    "total_likes": 384834,
+    "search_index": 100.0,
+    "trending_count": 0
+  },
+  {
+    "id": 26,
+    "name": "间谍过家家",
+    "name_en": "",
+    "category": "日本动漫",
+    "total_views": 11297359,
+    "total_videos": 895,
+    "total_likes": 785438,
+    "search_index": 92.5,
+    "trending_count": 0
+  },
+  {
+    "id": 33,
+    "name": "宝可梦系列",
+    "name_en": "",
+    "category": "日本动漫",
+    "total_views": 10625473,
+    "total_videos": 2000,
+    "total_likes": 280833,
+    "search_index": 100.0,
+    "trending_count": 0
+  },
+  {
+    "id": 46,
+    "name": "全职猎人",
+    "name_en": "",
+    "category": "日本动漫",
+    "total_views": 10425749,
+    "total_videos": 2000,
+    "total_likes": 150670,
+    "search_index": 100.0,
+    "trending_count": 0
+  },
+  {
+    "id": 16,
+    "name": "名侦探柯南",
+    "name_en": "",
+    "category": "日本动漫",
+    "total_views": 10301089,
+    "total_videos": 2000,
+    "total_likes": 327957,
+    "search_index": 100.0,
+    "trending_count": 0
+  },
+  {
+    "id": 40,
+    "name": "蓝色监狱",
+    "name_en": "",
+    "category": "日本动漫",
+    "total_views": 9480795,
+    "total_videos": 702,
+    "total_likes": 688308,
+    "search_index": 98.7,
+    "trending_count": 0
+  },
+  {
+    "id": 12,
+    "name": "Chiikawa",
+    "name_en": "",
+    "category": "日本动漫",
+    "total_views": 9403957,
+    "total_videos": 759,
+    "total_likes": 756585,
+    "search_index": 100.0,
+    "trending_count": 0
+  },
+  {
+    "id": 420,
+    "name": "王者荣耀",
+    "name_en": "",
+    "category": "游戏",
+    "total_views": 8839055,
+    "total_videos": 542,
+    "total_likes": 667813,
+    "search_index": 100.0,
+    "trending_count": 0
+  }
+]

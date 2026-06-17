@@ -1,0 +1,452 @@
+[
+  {
+    "platform": "douyin_ec",
+    "title": "吾皇自动铅笔学生专用活动铅笔",
+    "price": 37.59,
+    "shop_name": "卡西欧旗舰店",
+    "ip_name": "吾皇",
+    "monthly_sales": 259,
+    "url": "https://example.com/douyin_ec/329/2"
+  },
+  {
+    "platform": "douyin_ec",
+    "title": "吾皇卷笔刀创意可爱削笔器",
+    "price": 87.17,
+    "shop_name": "IP潮玩文具店",
+    "ip_name": "吾皇",
+    "monthly_sales": 243,
+    "url": "https://example.com/douyin_ec/329/1"
+  },
+  {
+    "platform": "douyin_ec",
+    "title": "吾皇贴纸手账素材装饰贴画",
+    "price": 36.7,
+    "shop_name": "卡西欧旗舰店",
+    "ip_name": "吾皇",
+    "monthly_sales": 194,
+    "url": "https://example.com/douyin_ec/329/0"
+  },
+  {
+    "platform": "pdd",
+    "title": "吾皇手账本创意可爱笔记本子",
+    "price": 34.74,
+    "shop_name": "樱花文具旗舰店",
+    "ip_name": "吾皇",
+    "monthly_sales": 189,
+    "url": "https://example.com/pdd/329/2"
+  },
+  {
+    "platform": "pdd",
+    "title": "吾皇联名胶带手账装饰和纸胶带",
+    "price": 25.94,
+    "shop_name": "爱好文具旗舰店",
+    "ip_name": "吾皇",
+    "monthly_sales": 279,
+    "url": "https://example.com/pdd/329/1"
+  },
+  {
+    "platform": "pdd",
+    "title": "吾皇联名中性笔按动黑色水笔套装",
+    "price": 128.9,
+    "shop_name": "卡通梦工厂",
+    "ip_name": "吾皇",
+    "monthly_sales": 192,
+    "url": "https://example.com/pdd/329/0"
+  },
+  {
+    "platform": "jd",
+    "title": "吾皇修正带大容量涂改带学生",
+    "price": 34.77,
+    "shop_name": "卡通梦工厂",
+    "ip_name": "吾皇",
+    "monthly_sales": 262,
+    "url": "https://example.com/jd/329/1"
+  },
+  {
+    "platform": "jd",
+    "title": "吾皇书签金属创意卡通书签",
+    "price": 17.75,
+    "shop_name": "樱花文具旗舰店",
+    "ip_name": "吾皇",
+    "monthly_sales": 174,
+    "url": "https://example.com/jd/329/0"
+  },
+  {
+    "platform": "taobao",
+    "title": "吾皇自动铅笔学生专用活动铅笔",
+    "price": 63.08,
+    "shop_name": "爱好文具旗舰店",
+    "ip_name": "吾皇",
+    "monthly_sales": 150,
+    "url": "https://example.com/taobao/329/3"
+  },
+  {
+    "platform": "taobao",
+    "title": "吾皇桌面收纳盒学生文具收纳",
+    "price": 23.19,
+    "shop_name": "卡通梦工厂",
+    "ip_name": "吾皇",
+    "monthly_sales": 216,
+    "url": "https://example.com/taobao/329/2"
+  },
+  {
+    "platform": "taobao",
+    "title": "吾皇联名中性笔按动黑色水笔套装",
+    "price": 145.67,
+    "shop_name": "国誉文具旗舰店",
+    "ip_name": "吾皇",
+    "monthly_sales": 158,
+    "url": "https://example.com/taobao/329/1"
+  },
+  {
+    "platform": "taobao",
+    "title": "吾皇手账本创意可爱笔记本子",
+    "price": 79.17,
+    "shop_name": "真彩文具旗舰店",
+    "ip_name": "吾皇",
+    "monthly_sales": 221,
+    "url": "https://example.com/taobao/329/0"
+  },
+  {
+    "platform": "douyin_ec",
+    "title": "阿狸桌面收纳盒学生文具收纳",
+    "price": 53.68,
+    "shop_name": "斑马旗舰店",
+    "ip_name": "阿狸",
+    "monthly_sales": 104,
+    "url": "https://example.com/douyin_ec/331/4"
+  },
+  {
+    "platform": "douyin_ec",
+    "title": "阿狸便利贴套装卡通可爱便签纸",
+    "price": 101.29,
+    "shop_name": "二次元文具集合店",
+    "ip_name": "阿狸",
+    "monthly_sales": 125,
+    "url": "https://example.com/douyin_ec/331/3"
+  },
+  {
+    "platform": "douyin_ec",
+    "title": "阿狸橡皮擦可爱卡通造型学生",
+    "price": 28.9,
+    "shop_name": "真彩文具旗舰店",
+    "ip_name": "阿狸",
+    "monthly_sales": 133,
+    "url": "https://example.com/douyin_ec/331/2"
+  },
+  {
+    "platform": "douyin_ec",
+    "title": "阿狸尺子套装学生直尺三角尺",
+    "price": 44.44,
+    "shop_name": "IP潮玩文具店",
+    "ip_name": "阿狸",
+    "monthly_sales": 84,
+    "url": "https://example.com/douyin_ec/331/1"
+  },
+  {
+    "platform": "douyin_ec",
+    "title": "阿狸便利贴套装卡通可爱便签纸",
+    "price": 72.18,
+    "shop_name": "二次元文具集合店",
+    "ip_name": "阿狸",
+    "monthly_sales": 64,
+    "url": "https://example.com/douyin_ec/331/0"
+  },
+  {
+    "platform": "pdd",
+    "title": "阿狸卷笔刀创意可爱削笔器",
+    "price": 63.47,
+    "shop_name": "猫太子旗舰店",
+    "ip_name": "阿狸",
+    "monthly_sales": 110,
+    "url": "https://example.com/pdd/331/4"
+  },
+  {
+    "platform": "pdd",
+    "title": "阿狸贴纸手账素材装饰贴画",
+    "price": 69.06,
+    "shop_name": "IP潮玩文具店",
+    "ip_name": "阿狸",
+    "monthly_sales": 133,
+    "url": "https://example.com/pdd/331/3"
+  },
+  {
+    "platform": "pdd",
+    "title": "阿狸橡皮擦可爱卡通造型学生",
+    "price": 10.61,
+    "shop_name": "卡西欧旗舰店",
+    "ip_name": "阿狸",
+    "monthly_sales": 99,
+    "url": "https://example.com/pdd/331/2"
+  },
+  {
+    "platform": "pdd",
+    "title": "阿狸文具套装礼盒学生开学礼物",
+    "price": 133.67,
+    "shop_name": "卡西欧旗舰店",
+    "ip_name": "阿狸",
+    "monthly_sales": 94,
+    "url": "https://example.com/pdd/331/1"
+  },
+  {
+    "platform": "pdd",
+    "title": "阿狸手账本创意可爱笔记本子",
+    "price": 31.81,
+    "shop_name": "卡西欧旗舰店",
+    "ip_name": "阿狸",
+    "monthly_sales": 120,
+    "url": "https://example.com/pdd/331/0"
+  },
+  {
+    "platform": "jd",
+    "title": "阿狸正版授权笔袋大容量学生文具盒",
+    "price": 53.71,
+    "shop_name": "IP潮玩文具店",
+    "ip_name": "阿狸",
+    "monthly_sales": 93,
+    "url": "https://example.com/jd/331/3"
+  },
+  {
+    "platform": "jd",
+    "title": "阿狸橡皮擦可爱卡通造型学生",
+    "price": 21.17,
+    "shop_name": "三年二班旗舰店",
+    "ip_name": "阿狸",
+    "monthly_sales": 134,
+    "url": "https://example.com/jd/331/2"
+  },
+  {
+    "platform": "jd",
+    "title": "阿狸尺子套装学生直尺三角尺",
+    "price": 136.09,
+    "shop_name": "猫太子旗舰店",
+    "ip_name": "阿狸",
+    "monthly_sales": 110,
+    "url": "https://example.com/jd/331/1"
+  },
+  {
+    "platform": "jd",
+    "title": "阿狸便利贴套装卡通可爱便签纸",
+    "price": 118.65,
+    "shop_name": "真彩文具旗舰店",
+    "ip_name": "阿狸",
+    "monthly_sales": 140,
+    "url": "https://example.com/jd/331/0"
+  },
+  {
+    "platform": "taobao",
+    "title": "阿狸联名胶带手账装饰和纸胶带",
+    "price": 9.02,
+    "shop_name": "猫太子旗舰店",
+    "ip_name": "阿狸",
+    "monthly_sales": 60,
+    "url": "https://example.com/taobao/331/5"
+  },
+  {
+    "platform": "taobao",
+    "title": "阿狸联名胶带手账装饰和纸胶带",
+    "price": 45.02,
+    "shop_name": "万代旗舰店",
+    "ip_name": "阿狸",
+    "monthly_sales": 82,
+    "url": "https://example.com/taobao/331/4"
+  },
+  {
+    "platform": "taobao",
+    "title": "阿狸手账本创意可爱笔记本子",
+    "price": 9.71,
+    "shop_name": "IP潮玩文具店",
+    "ip_name": "阿狸",
+    "monthly_sales": 84,
+    "url": "https://example.com/taobao/331/3"
+  },
+  {
+    "platform": "taobao",
+    "title": "阿狸桌面收纳盒学生文具收纳",
+    "price": 56.2,
+    "shop_name": "齐心文具旗舰店",
+    "ip_name": "阿狸",
+    "monthly_sales": 90,
+    "url": "https://example.com/taobao/331/2"
+  },
+  {
+    "platform": "taobao",
+    "title": "阿狸自动铅笔学生专用活动铅笔",
+    "price": 30.07,
+    "shop_name": "真彩文具旗舰店",
+    "ip_name": "阿狸",
+    "monthly_sales": 91,
+    "url": "https://example.com/taobao/331/1"
+  },
+  {
+    "platform": "taobao",
+    "title": "阿狸联名胶带手账装饰和纸胶带",
+    "price": 41.18,
+    "shop_name": "齐心文具旗舰店",
+    "ip_name": "阿狸",
+    "monthly_sales": 74,
+    "url": "https://example.com/taobao/331/0"
+  },
+  {
+    "platform": "douyin_ec",
+    "title": "加菲猫橡皮擦可爱卡通造型学生",
+    "price": 19.43,
+    "shop_name": "国誉文具旗舰店",
+    "ip_name": "加菲猫",
+    "monthly_sales": 67,
+    "url": "https://example.com/douyin_ec/311/8"
+  },
+  {
+    "platform": "douyin_ec",
+    "title": "加菲猫文具套装礼盒学生开学礼物",
+    "price": 97.83,
+    "shop_name": "卡西欧旗舰店",
+    "ip_name": "加菲猫",
+    "monthly_sales": 46,
+    "url": "https://example.com/douyin_ec/311/7"
+  },
+  {
+    "platform": "douyin_ec",
+    "title": "加菲猫自动铅笔学生专用活动铅笔",
+    "price": 50.92,
+    "shop_name": "万代旗舰店",
+    "ip_name": "加菲猫",
+    "monthly_sales": 44,
+    "url": "https://example.com/douyin_ec/311/6"
+  },
+  {
+    "platform": "douyin_ec",
+    "title": "加菲猫贴纸手账素材装饰贴画",
+    "price": 55.3,
+    "shop_name": "百乐旗舰店",
+    "ip_name": "加菲猫",
+    "monthly_sales": 69,
+    "url": "https://example.com/douyin_ec/311/5"
+  },
+  {
+    "platform": "douyin_ec",
+    "title": "加菲猫正版授权笔袋大容量学生文具盒",
+    "price": 42.29,
+    "shop_name": "国誉文具旗舰店",
+    "ip_name": "加菲猫",
+    "monthly_sales": 66,
+    "url": "https://example.com/douyin_ec/311/4"
+  },
+  {
+    "platform": "douyin_ec",
+    "title": "加菲猫手账本创意可爱笔记本子",
+    "price": 18.58,
+    "shop_name": "齐心文具旗舰店",
+    "ip_name": "加菲猫",
+    "monthly_sales": 69,
+    "url": "https://example.com/douyin_ec/311/3"
+  },
+  {
+    "platform": "douyin_ec",
+    "title": "加菲猫联名胶带手账装饰和纸胶带",
+    "price": 59.55,
+    "shop_name": "二次元文具集合店",
+    "ip_name": "加菲猫",
+    "monthly_sales": 39,
+    "url": "https://example.com/douyin_ec/311/2"
+  },
+  {
+    "platform": "douyin_ec",
+    "title": "加菲猫联名中性笔按动黑色水笔套装",
+    "price": 95.4,
+    "shop_name": "卡西欧旗舰店",
+    "ip_name": "加菲猫",
+    "monthly_sales": 65,
+    "url": "https://example.com/douyin_ec/311/1"
+  },
+  {
+    "platform": "douyin_ec",
+    "title": "加菲猫正版授权笔袋大容量学生文具盒",
+    "price": 54.04,
+    "shop_name": "得力文具旗舰店",
+    "ip_name": "加菲猫",
+    "monthly_sales": 58,
+    "url": "https://example.com/douyin_ec/311/0"
+  },
+  {
+    "platform": "pdd",
+    "title": "加菲猫联名中性笔按动黑色水笔套装",
+    "price": 38.77,
+    "shop_name": "国誉文具旗舰店",
+    "ip_name": "加菲猫",
+    "monthly_sales": 50,
+    "url": "https://example.com/pdd/311/8"
+  },
+  {
+    "platform": "pdd",
+    "title": "加菲猫文具套装礼盒学生开学礼物",
+    "price": 51.85,
+    "shop_name": "广博旗舰店",
+    "ip_name": "加菲猫",
+    "monthly_sales": 36,
+    "url": "https://example.com/pdd/311/7"
+  },
+  {
+    "platform": "pdd",
+    "title": "加菲猫修正带大容量涂改带学生",
+    "price": 43.74,
+    "shop_name": "M&G精品文具店",
+    "ip_name": "加菲猫",
+    "monthly_sales": 36,
+    "url": "https://example.com/pdd/311/6"
+  },
+  {
+    "platform": "pdd",
+    "title": "加菲猫便利贴套装卡通可爱便签纸",
+    "price": 45.32,
+    "shop_name": "得力文具旗舰店",
+    "ip_name": "加菲猫",
+    "monthly_sales": 58,
+    "url": "https://example.com/pdd/311/5"
+  },
+  {
+    "platform": "pdd",
+    "title": "加菲猫自动铅笔学生专用活动铅笔",
+    "price": 10.33,
+    "shop_name": "卡通梦工厂",
+    "ip_name": "加菲猫",
+    "monthly_sales": 65,
+    "url": "https://example.com/pdd/311/4"
+  },
+  {
+    "platform": "pdd",
+    "title": "加菲猫联名胶带手账装饰和纸胶带",
+    "price": 53.55,
+    "shop_name": "IP潮玩文具店",
+    "ip_name": "加菲猫",
+    "monthly_sales": 42,
+    "url": "https://example.com/pdd/311/3"
+  },
+  {
+    "platform": "pdd",
+    "title": "加菲猫贴纸手账素材装饰贴画",
+    "price": 60.85,
+    "shop_name": "广博旗舰店",
+    "ip_name": "加菲猫",
+    "monthly_sales": 48,
+    "url": "https://example.com/pdd/311/2"
+  },
+  {
+    "platform": "pdd",
+    "title": "加菲猫书立金属学生桌面书架",
+    "price": 29.33,
+    "shop_name": "齐心文具旗舰店",
+    "ip_name": "加菲猫",
+    "monthly_sales": 45,
+    "url": "https://example.com/pdd/311/1"
+  },
+  {
+    "platform": "pdd",
+    "title": "加菲猫书立金属学生桌面书架",
+    "price": 80.36,
+    "shop_name": "爱好文具旗舰店",
+    "ip_name": "加菲猫",
+    "monthly_sales": 59,
+    "url": "https://example.com/pdd/311/0"
+  }
+]

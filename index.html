@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IP文具趋势监控面板</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+    <style>
+        body { background: #f1f5f9; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+        .card { background: white; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); }
+        .badge-emerging { background: #dcfce7; color: #166534; }
+        .badge-hot { background: #fee2e2; color: #991b1b; }
+        .badge-growing { background: #fef3c7; color: #92400e; }
+        .heat-bao { background: #fee2e2; color: #dc2626; font-weight: 700; }
+        .heat-hot { background: #fef3c7; color: #d97706; font-weight: 600; }
+        .heat-stable { background: #f0fdf4; color: #16a34a; }
+        .platform-taobao { color: #ff5000; }
+        .platform-jd { color: #e1251b; }
+        .platform-pdd { color: #e02e24; }
+        .platform-douyin_ec { color: #111111; font-weight: 600; }
+        .tab-active { border-bottom: 2px solid #6366f1; color: #6366f1; font-weight: 600; }
+    </style>
+</head>
+<body class="min-h-screen">
+    <header class="bg-white border-b border-gray-200 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex items-center justify-between">
+            <div>
+                <h1 class="text-xl font-bold text-gray-900">IP文具趋势监控面板</h1>
+                <p class="text-sm text-gray-500">电商销售 + 内容平台曝光 全链路追踪</p>
+            </div>
+            <span id="lastUpdated" class="text-sm text-gray-400"></span>
+        </div>
+    </header>
+
+    <main class="max-w-7xl mx-auto px-6 py-6">
+        <!-- Summary Cards -->
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-4 mb-6">
+            <div class="card p-5">
+                <div class="text-sm text-gray-500 mb-1">监控IP数</div>
+                <div id="totalIPs" class="text-2xl font-bold text-gray-900">-</div>
+            </div>
+            <div class="card p-5">
+                <div class="text-sm text-gray-500 mb-1">电商热门IP</div>
+                <div id="hottestIP" class="text-2xl font-bold text-indigo-600">-</div>
+            </div>
+            <div class="card p-5">
+                <div class="text-sm text-gray-500 mb-1">内容曝光最热</div>
+                <div id="contentHottest" class="text-2xl font-bold text-pink-600">-</div>
+            </div>
+            <div class="card p-5">
+                <div class="text-sm text-gray-500 mb-1">新兴IP发现</div>
+                <div id="emergingCount" class="text-2xl font-bold text-green-600">-</div>
+            </div>
+            <div class="card p-5">
+                <div class="text-sm text-gray-500 mb-1">收录商品数</div>
+                <div id="totalProducts" class="text-2xl font-bold text-gray-900">-</div>
+            </div>
+        </div>
+
+        <!-- 内容平台热词 -->
+        <div class="card mb-6">
+            <div class="border-b border-gray-100 px-5 pt-4">
+                <div class="flex items-center justify-between">
+                    <div class="flex gap-6">
+                        <button class="content-tab-btn tab-active pb-3 text-sm" data-ctab="hotword-rank">曝光量排行</button>
+                        <button class="content-tab-btn pb-3 text-sm text-gray-500" data-ctab="hotword-trend">曝光趋势</button>
+                        <button class="content-tab-btn pb-3 text-sm text-gray-500" data-ctab="hot-discovery">热门发现</button>
+                    </div>
+                    <div class="flex gap-2 pb-3">
+                        <button class="content-platform-btn px-3 py-1 text-xs rounded-full bg-gray-900 text-white" data-cplatform="all">全部</button>
+                        <button class="content-platform-btn px-3 py-1 text-xs rounded-full bg-gray-100 text-gray-600" data-cplatform="douyin">抖音</button>
+                        <button class="content-platform-btn px-3 py-1 text-xs rounded-full bg-gray-100 text-gray-600" data-cplatform="bilibili">B站</button>
+                        <button class="content-platform-btn px-3 py-1 text-xs rounded-full bg-gray-100 text-gray-600" data-cplatform="xiaohongshu">小红书</button>
+                    </div>
+                </div>
+            </div>
+            <div class="p-5">
+                <div id="ctab-hotword-rank"><div id="hotwordRankChart" style="height: 380px;"></div></div>
+                <div id="ctab-hotword-trend" class="hidden"><div id="hotwordTrendChart" style="height: 380px;"></div></div>
+                <div id="ctab-hot-discovery" class="hidden"><div id="hotDiscoveryList"></div></div>
+            </div>
+        </div>
+
+        <!-- 电商数据 -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-6">
+            <div class="lg:col-span-2">
+                <div class="card">
+                    <div class="border-b border-gray-100 px-5 pt-4">
+                        <div class="flex gap-6">
+                            <button class="tab-btn tab-active pb-3 text-sm" data-tab="ranking">电商销售排行</button>
+                            <button class="tab-btn pb-3 text-sm text-gray-500" data-tab="trend">销售趋势</button>
+                            <button class="tab-btn pb-3 text-sm text-gray-500" data-tab="emerging">新兴IP</button>
+                        </div>
+                    </div>
+                    <div class="p-5">
+                        <div id="tab-ranking">
+                            <div class="flex gap-2 mb-4">
+                                <button class="platform-btn px-3 py-1 text-xs rounded-full bg-indigo-100 text-indigo-700" data-platform="all">全部</button>
+                                <button class="platform-btn px-3 py-1 text-xs rounded-full bg-gray-100 text-gray-600" data-platform="taobao">淘宝/天猫</button>
+                                <button class="platform-btn px-3 py-1 text-xs rounded-full bg-gray-100 text-gray-600" data-platform="jd">京东</button>
+                                <button class="platform-btn px-3 py-1 text-xs rounded-full bg-gray-100 text-gray-600" data-platform="pdd">拼多多</button>
+                                <button class="platform-btn px-3 py-1 text-xs rounded-full bg-gray-100 text-gray-600" data-platform="douyin_ec">抖音电商</button>
+                            </div>
+                            <div id="rankingChart" style="height: 400px;"></div>
+                        </div>
+                        <div id="tab-trend" class="hidden"><div id="trendChart" style="height: 400px;"></div></div>
+                        <div id="tab-emerging" class="hidden"><div id="emergingList"></div></div>
+                    </div>
+                </div>
+            </div>
+            <div class="space-y-6">
+                <div class="card p-5">
+                    <h3 class="text-sm font-semibold text-gray-700 mb-3">Top 5 IP 多维对比</h3>
+                    <div id="radarChart" style="height: 280px;"></div>
+                </div>
+                <div class="card p-5">
+                    <h3 class="text-sm font-semibold text-gray-700 mb-3">平台分布对比</h3>
+                    <div id="platformChart" style="height: 250px;"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 商品表 -->
+        <div class="card">
+            <div class="px-5 py-4 border-b border-gray-100">
+                <h3 class="text-sm font-semibold text-gray-700">热门商品</h3>
+            </div>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm">
+                    <thead class="bg-gray-50 text-gray-500">
+                        <tr>
+                            <th class="px-5 py-3 text-left font-medium">商品</th>
+                            <th class="px-5 py-3 text-left font-medium">IP</th>
+                            <th class="px-5 py-3 text-left font-medium">平台</th>
+                            <th class="px-5 py-3 text-right font-medium">价格</th>
+                            <th class="px-5 py-3 text-right font-medium">月销量</th>
+                        </tr>
+                    </thead>
+                    <tbody id="productTable" class="divide-y divide-gray-50"></tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+<script>
+// ===== 数据加载（从静态JSON文件） =====
+const DATA_BASE = './data';
+async function loadJSON(file) {
+    try {
+        const resp = await fetch(`${DATA_BASE}/${file}`);
+        if (!resp.ok) return null;
+        return await resp.json();
+    } catch(e) { console.error(e); return null; }
+}
+
+// ===== 工具函数 =====
+function formatNumber(num) {
+    if (num >= 100000000) return (num / 100000000).toFixed(1) + '亿';
+    if (num >= 10000) return (num / 10000).toFixed(1) + '万';
+    return num.toLocaleString();
+}
+const COLORS = ['#6366f1','#ec4899','#f59e0b','#10b981','#06b6d4','#8b5cf6','#f43f5e','#14b8a6','#f97316','#6b7280','#84cc16','#a855f7','#0ea5e9','#e11d48','#059669'];
+const PLATFORM_NAMES = {taobao:'淘宝/天猫',jd:'京东',pdd:'拼多多',douyin_ec:'抖音电商'};
+const PLATFORM_COLORS = {taobao:'#ff5000',jd:'#e1251b',pdd:'#e02e24',douyin_ec:'#111111'};
+
+// ===== 图表 =====
+let rankingChart, trendChart, radarChart, platformChart, hotwordRankChart, hotwordTrendChart;
+
+function initCharts() {
+    rankingChart = echarts.init(document.getElementById('rankingChart'));
+    trendChart = echarts.init(document.getElementById('trendChart'));
+    radarChart = echarts.init(document.getElementById('radarChart'));
+    platformChart = echarts.init(document.getElementById('platformChart'));
+    hotwordRankChart = echarts.init(document.getElementById('hotwordRankChart'));
+    hotwordTrendChart = echarts.init(document.getElementById('hotwordTrendChart'));
+    window.addEventListener('resize', () => { [rankingChart,trendChart,radarChart,platformChart,hotwordRankChart,hotwordTrendChart].forEach(c=>c&&c.resize()); });
+}
+
+function renderBarChart(chart, data, valueKey, labelFn) {
+    if (!data||!data.length) { chart.setOption({title:{text:'暂无数据',left:'center',top:'middle',textStyle:{color:'#94a3b8'}}}); return; }
+    const names = data.map(d=>d.name).reverse();
+    const values = data.map(d=>d[valueKey]).reverse();
+    chart.setOption({
+        tooltip:{trigger:'axis',axisPointer:{type:'shadow'},formatter:labelFn},
+        grid:{left:90,right:80,top:10,bottom:30},
+        xAxis:{type:'value',axisLabel:{formatter:v=>formatNumber(v)}},
+        yAxis:{type:'category',data:names,axisLabel:{fontSize:11}},
+        series:[{type:'bar',data:values.map((v,i)=>{const r=v/(values[values.length-1]||1);return{value:v,itemStyle:{color:r>0.8?'#ef4444':r>0.5?'#f59e0b':'#6366f1',borderRadius:[0,4,4,0]}};}),barWidth:'55%',label:{show:true,position:'right',formatter:p=>formatNumber(p.value),fontSize:10,color:'#6b7280'}}]
+    });
+}
+
+function renderLineChart(chart, data) {
+    if (!data||!Object.keys(data).length) { chart.setOption({title:{text:'暂无数据',left:'center',top:'middle',textStyle:{color:'#94a3b8'}}}); return; }
+    const series=[],legend=[];let allDates=new Set();
+    Object.entries(data).forEach(([name,info],idx)=>{
+        legend.push(name);
+        const key = info.dates ? 'dates' : Object.keys(info).find(k=>Array.isArray(info[k]));
+        const valKey = info.sales ? 'sales' : (info.views ? 'views' : 'sales');
+        (info.dates||[]).forEach(d=>allDates.add(d));
+        series.push({name,type:'line',smooth:true,symbol:'circle',symbolSize:4,lineStyle:{width:2.5},color:COLORS[idx%COLORS.length],areaStyle:{opacity:0.05},data:(info.dates||[]).map((d,i)=>[d,(info[valKey]||[])[i]])});
+    });
+    chart.setOption({tooltip:{trigger:'axis'},legend:{data:legend,bottom:0,textStyle:{fontSize:10}},grid:{left:70,right:20,top:20,bottom:45},xAxis:{type:'category',data:[...allDates].sort(),axisLabel:{fontSize:10}},yAxis:{type:'value',axisLabel:{formatter:v=>formatNumber(v)}},series});
+}
+
+// ===== 主逻辑 =====
+document.addEventListener('DOMContentLoaded', async () => {
+    initCharts();
+
+    // Load all data
+    const [summary, rankings, trends, emerging, hotwords, hwTrends, hotDisc, products, platformCmp] = await Promise.all([
+        loadJSON('summary.json'),
+        loadJSON('rankings_all.json'),
+        loadJSON('trends.json'),
+        loadJSON('emerging.json'),
+        loadJSON('hotwords_all.json'),
+        loadJSON('hotword_trends.json'),
+        loadJSON('hot_discovery.json'),
+        loadJSON('products.json'),
+        loadJSON('platform_compare.json'),
+    ]);
+
+    // Summary
+    if (summary) {
+        document.getElementById('totalIPs').textContent = summary.total_ips;
+        document.getElementById('hottestIP').textContent = summary.hottest_ip;
+        document.getElementById('contentHottest').textContent = summary.content_hottest;
+        document.getElementById('emergingCount').textContent = summary.emerging_count;
+        document.getElementById('totalProducts').textContent = summary.total_products.toLocaleString();
+        document.getElementById('lastUpdated').textContent = `数据更新: ${summary.last_updated}`;
+    }
+
+    // Charts
+    if (rankings) {
+        renderBarChart(rankingChart, rankings, 'total_sales', p=>{const d=rankings[rankings.length-1-p[0].dataIndex];return `<b>${d.name}</b><br/>分类:${d.category}<br/>销量:${formatNumber(d.total_sales)}<br/>均价:¥${d.avg_price}`;});
+        // Radar
+        const top5=rankings.slice(0,5); const ms=Math.max(...top5.map(d=>d.total_sales))||1; const mp=Math.max(...top5.map(d=>d.product_count))||1;
+        radarChart.setOption({legend:{data:top5.map(d=>d.name),bottom:0,textStyle:{fontSize:10}},radar:{indicator:[{name:'销量',max:100},{name:'商品数',max:100},{name:'均价',max:100},{name:'热度',max:100}],radius:'60%'},series:[{type:'radar',data:top5.map((d,i)=>({name:d.name,value:[(d.total_sales/ms*100).toFixed(0),(d.product_count/mp*100).toFixed(0),(d.avg_price/80*100).toFixed(0),70-i*10],lineStyle:{color:COLORS[i]},areaStyle:{color:COLORS[i],opacity:0.1},itemStyle:{color:COLORS[i]}}))}]});
+    }
+    if (trends) renderLineChart(trendChart, trends);
+    if (hotwords) renderBarChart(hotwordRankChart, hotwords, 'total_views', p=>{const d=hotwords[hotwords.length-1-p[0].dataIndex];return `<b>${d.name}</b><br/>曝光:${formatNumber(d.total_views)}<br/>视频:${formatNumber(d.total_videos)}<br/>点赞:${formatNumber(d.total_likes)}`;});
+    if (hwTrends) renderLineChart(hotwordTrendChart, hwTrends);
+    if (platformCmp && platformCmp.length) {
+        platformChart.setOption({tooltip:{trigger:'axis'},grid:{left:60,right:20,top:10,bottom:30},xAxis:{type:'category',data:platformCmp.map(d=>PLATFORM_NAMES[d.platform]||d.platform)},yAxis:{type:'value'},series:[{type:'bar',data:platformCmp.map(d=>({value:d.total_sales,itemStyle:{color:PLATFORM_COLORS[d.platform]||'#6b7280',borderRadius:[4,4,0,0]}})),barWidth:'50%'}]});
+    }
+
+    // Emerging list
+    if (emerging && emerging.length) {
+        const typeMap={emerging:'新兴',hot:'热门',growing:'增长'};
+        document.getElementById('emergingList').innerHTML = `<div class="space-y-3">${emerging.map(e=>`<div class="flex items-center justify-between p-3 rounded-lg bg-gray-50"><div class="flex items-center gap-3"><span class="px-2 py-0.5 text-xs rounded-full badge-${e.alert_type}">${typeMap[e.alert_type]||e.alert_type}</span><span class="font-medium">${e.ip_name}</span><span class="text-xs text-gray-500">${e.category}</span></div><span class="text-sm font-mono ${e.score>70?'text-red-500':'text-amber-500'}">${e.score}分</span></div>`).join('')}</div>`;
+    }
+
+    // Hot discovery
+    if (hotDisc && hotDisc.length) {
+        document.getElementById('hotDiscoveryList').innerHTML = `<div class="mb-3 text-xs text-gray-500">基于近3天曝光增速排序</div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">${hotDisc.map((h,i)=>`<div class="p-4 rounded-lg border ${i<3?'border-red-200 bg-red-50/50':'border-gray-100 bg-gray-50/50'}"><div class="flex items-center justify-between mb-2"><div class="flex items-center gap-2"><span class="text-lg font-bold ${i<3?'text-red-500':'text-gray-700'}">#${i+1}</span><span class="font-semibold">${h.name}</span></div><span class="px-2 py-0.5 text-xs rounded-full heat-${h.heat_level==='爆'?'bao':h.heat_level==='热'?'hot':'stable'}">${h.heat_level}</span></div><div class="flex items-center justify-between text-xs"><span class="text-gray-500">${h.category}</span><span class="${h.growth_rate>0?'text-red-500':'text-green-500'} font-medium">${h.growth_rate>0?'↑':'↓'}${Math.abs(h.growth_rate)}%</span></div></div>`).join('')}</div>`;
+    }
+
+    // Products
+    if (products && products.length) {
+        const pm={taobao:'淘宝',jd:'京东',pdd:'拼多多',douyin_ec:'抖音电商'};
+        document.getElementById('productTable').innerHTML = products.slice(0,30).map(p=>`<tr class="hover:bg-gray-50"><td class="px-5 py-3 max-w-xs truncate">${p.title}</td><td class="px-5 py-3"><span class="px-2 py-0.5 text-xs rounded-full bg-indigo-50 text-indigo-700">${p.ip_name}</span></td><td class="px-5 py-3 platform-${p.platform} text-xs font-medium">${pm[p.platform]||p.platform}</td><td class="px-5 py-3 text-right">¥${p.price.toFixed(2)}</td><td class="px-5 py-3 text-right">${p.monthly_sales.toLocaleString()}</td></tr>`).join('');
+    }
+
+    // Tab switching
+    document.querySelectorAll('.tab-btn').forEach(btn=>btn.addEventListener('click',()=>{
+        document.querySelectorAll('.tab-btn').forEach(b=>{b.classList.remove('tab-active');b.classList.add('text-gray-500');});
+        btn.classList.add('tab-active');btn.classList.remove('text-gray-500');
+        const t=btn.dataset.tab;
+        document.getElementById('tab-ranking').classList.toggle('hidden',t!=='ranking');
+        document.getElementById('tab-trend').classList.toggle('hidden',t!=='trend');
+        document.getElementById('tab-emerging').classList.toggle('hidden',t!=='emerging');
+        if(t==='trend')trendChart.resize();if(t==='ranking')rankingChart.resize();
+    }));
+    document.querySelectorAll('.content-tab-btn').forEach(btn=>btn.addEventListener('click',()=>{
+        document.querySelectorAll('.content-tab-btn').forEach(b=>{b.classList.remove('tab-active');b.classList.add('text-gray-500');});
+        btn.classList.add('tab-active');btn.classList.remove('text-gray-500');
+        const t=btn.dataset.ctab;
+        document.getElementById('ctab-hotword-rank').classList.toggle('hidden',t!=='hotword-rank');
+        document.getElementById('ctab-hotword-trend').classList.toggle('hidden',t!=='hotword-trend');
+        document.getElementById('ctab-hot-discovery').classList.toggle('hidden',t!=='hot-discovery');
+        if(t==='hotword-rank')hotwordRankChart.resize();if(t==='hotword-trend')hotwordTrendChart.resize();
+    }));
+
+    // Platform filter (load different JSON)
+    document.querySelectorAll('.platform-btn').forEach(btn=>btn.addEventListener('click',async()=>{
+        document.querySelectorAll('.platform-btn').forEach(b=>{b.className='platform-btn px-3 py-1 text-xs rounded-full bg-gray-100 text-gray-600';});
+        btn.className='platform-btn px-3 py-1 text-xs rounded-full bg-indigo-100 text-indigo-700';
+        const d=await loadJSON(`rankings_${btn.dataset.platform}.json`);
+        if(d)renderBarChart(rankingChart,d,'total_sales');
+    }));
+    document.querySelectorAll('.content-platform-btn').forEach(btn=>btn.addEventListener('click',async()=>{
+        document.querySelectorAll('.content-platform-btn').forEach(b=>{b.className='content-platform-btn px-3 py-1 text-xs rounded-full bg-gray-100 text-gray-600';});
+        btn.className='content-platform-btn px-3 py-1 text-xs rounded-full bg-gray-900 text-white';
+        const d=await loadJSON(`hotwords_${btn.dataset.cplatform}.json`);
+        if(d)renderBarChart(hotwordRankChart,d,'total_views');
+    }));
+});
+</script>
+</body>
+</html>

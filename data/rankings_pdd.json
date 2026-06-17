@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "name": "三丽鸥",
+    "name_en": "",
+    "category": "日本动漫",
+    "total_sales": 64995,
+    "avg_price": 38.17,
+    "product_count": 104
+  },
+  {
+    "id": 12,
+    "name": "Chiikawa",
+    "name_en": "",
+    "category": "日本动漫",
+    "total_sales": 54020,
+    "avg_price": 35.27,
+    "product_count": 112
+  },
+  {
+    "id": 254,
+    "name": "迪士尼",
+    "name_en": "",
+    "category": "美国动画",
+    "total_sales": 47151,
+    "avg_price": 46.25,
+    "product_count": 104
+  },
+  {
+    "id": 2,
+    "name": "库洛米",
+    "name_en": "",
+    "category": "日本动漫",
+    "total_sales": 42459,
+    "avg_price": 48.12,
+    "product_count": 88
+  },
+  {
+    "id": 247,
+    "name": "线条小狗",
+    "name_en": "",
+    "category": "韩国IP",
+    "total_sales": 42280,
+    "avg_price": 48.43,
+    "product_count": 112
+  },
+  {
+    "id": 248,
+    "name": "Loopy",
+    "name_en": "",
+    "category": "韩国IP",
+    "total_sales": 37501,
+    "avg_price": 33.73,
+    "product_count": 88
+  },
+  {
+    "id": 4,
+    "name": "美乐蒂",
+    "name_en": "",
+    "category": "日本动漫",
+    "total_sales": 33305,
+    "avg_price": 39.17,
+    "product_count": 56
+  },
+  {
+    "id": 7,
+    "name": "玉桂狗",
+    "name_en": "",
+    "category": "日本动漫",
+    "total_sales": 30449,
+    "avg_price": 39.82,
+    "product_count": 56
+  },
+  {
+    "id": 32,
+    "name": "宝可梦",
+    "name_en": "",
+    "category": "日本动漫",
+    "total_sales": 28312,
+    "avg_price": 37.29,
+    "product_count": 128
+  },
+  {
+    "id": 14,
+    "name": "蜡笔小新",
+    "name_en": "",
+    "category": "日本动漫",
+    "total_sales": 27829,
+    "avg_price": 40.65,
+    "product_count": 104
+  },
+  {
+    "id": 250,
+    "name": "黄油小熊",
+    "name_en": "",
+    "category": "韩国IP",
+    "total_sales": 27560,
+    "avg_price": 43.06,
+    "product_count": 152
+  },
+  {
+    "id": 444,
+    "name": "泡泡玛特",
+    "name_en": "",
+    "category": "潮玩",
+    "total_sales": 27516,
+    "avg_price": 41.1,
+    "product_count": 136
+  },
+  {
+    "id": 418,
+    "name": "原神",
+    "name_en": "",
+    "category": "游戏",
+    "total_sales": 23869,
+    "avg_price": 42.09,
+    "product_count": 48
+  },
+  {
+    "id": 419,
+    "name": "蛋仔派对",
+    "name_en": "",
+    "category": "游戏",
+    "total_sales": 23570,
+    "avg_price": 44.21,
+    "product_count": 40
+  },
+  {
+    "id": 31,
+    "name": "奥特曼",
+    "name_en": "",
+    "category": "日本动漫",
+    "total_sales": 23553,
+    "avg_price": 36.28,
+    "product_count": 40
+  },
+  {
+    "id": 450,
+    "name": "Labubu",
+    "name_en": "",
+    "category": "潮玩",
+    "total_sales": 22347,
+    "avg_price": 33.9,
+    "product_count": 80
+  },
+  {
+    "id": 8,
+    "name": "凯蒂猫",
+    "name_en": "",
+    "category": "日本动漫",
+    "total_sales": 22284,
+    "avg_price": 40.83,
+    "product_count": 160
+  },
+  {
+    "id": 5,
+    "name": "帕恰狗",
+    "name_en": "",
+    "category": "日本动漫",
+    "total_sales": 21692,
+    "avg_price": 39.98,
+    "product_count": 120
+  },
+  {
+    "id": 6,
+    "name": "大耳狗",
+    "name_en": "",
+    "category": "日本动漫",
+    "total_sales": 21183,
+    "avg_price": 44.41,
+    "product_count": 56
+  },
+  {
+    "id": 276,
+    "name": "史迪奇",
+    "name_en": "",
+    "category": "美国动画",
+    "total_sales": 20942,
+    "avg_price": 41.28,
+    "product_count": 72
+  }
+]

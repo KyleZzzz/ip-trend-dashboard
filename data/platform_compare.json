@@ -1,0 +1,26 @@
+[
+  {
+    "platform": "douyin_ec",
+    "total_sales": 69881,
+    "avg_price": 44.1,
+    "products": 112
+  },
+  {
+    "platform": "jd",
+    "total_sales": 54574,
+    "avg_price": 43.76,
+    "products": 88
+  },
+  {
+    "platform": "pdd",
+    "total_sales": 64995,
+    "avg_price": 38.17,
+    "products": 104
+  },
+  {
+    "platform": "taobao",
+    "total_sales": 79505,
+    "avg_price": 32.9,
+    "products": 128
+  }
+]
