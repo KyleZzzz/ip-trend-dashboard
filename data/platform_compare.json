@@ -1,26 +1,26 @@
 [
   {
     "platform": "douyin_ec",
-    "total_sales": 69881,
-    "avg_price": 44.1,
-    "products": 112
+    "total_sales": 41085,
+    "avg_price": 38.04,
+    "products": 32
   },
   {
     "platform": "jd",
-    "total_sales": 54574,
-    "avg_price": 43.76,
-    "products": 88
+    "total_sales": 61730,
+    "avg_price": 48.15,
+    "products": 48
   },
   {
     "platform": "pdd",
-    "total_sales": 64995,
-    "avg_price": 38.17,
-    "products": 104
+    "total_sales": 41930,
+    "avg_price": 40.02,
+    "products": 32
   },
   {
     "platform": "taobao",
-    "total_sales": 79505,
-    "avg_price": 32.9,
-    "products": 128
+    "total_sales": 70743,
+    "avg_price": 33.56,
+    "products": 72
   }
 ]

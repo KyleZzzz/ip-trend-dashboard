@@ -1,137 +1,137 @@
 [
   {
-    "id": 61,
-    "name": "JOJO",
-    "category": "日本动漫",
-    "recent_views": 44344100,
-    "daily_avg": 14781366,
-    "growth_rate": 1000.0,
+    "id": 424,
+    "name": "绝区零",
+    "category": "游戏",
+    "recent_views": 17649864,
+    "daily_avg": 5883288,
+    "growth_rate": 69.7,
     "heat_level": "爆"
   },
   {
-    "id": 19,
-    "name": "海贼王",
+    "id": 39,
+    "name": "药屋少女",
     "category": "日本动漫",
-    "recent_views": 35295120,
-    "daily_avg": 11765040,
-    "growth_rate": 1000.0,
-    "heat_level": "爆"
-  },
-  {
-    "id": 22,
-    "name": "疾风传",
-    "category": "日本动漫",
-    "recent_views": 34020769,
-    "daily_avg": 11340256,
-    "growth_rate": 1000.0,
-    "heat_level": "爆"
-  },
-  {
-    "id": 55,
-    "name": "我推的孩子",
-    "category": "日本动漫",
-    "recent_views": 30775297,
-    "daily_avg": 10258432,
-    "growth_rate": 1000.0,
-    "heat_level": "爆"
-  },
-  {
-    "id": 164,
-    "name": "怪化猫",
-    "category": "日本动漫",
-    "recent_views": 24297917,
-    "daily_avg": 8099305,
-    "growth_rate": 1000.0,
-    "heat_level": "爆"
-  },
-  {
-    "id": 193,
-    "name": "假面骑士",
-    "category": "日本动漫",
-    "recent_views": 22281447,
-    "daily_avg": 7427149,
-    "growth_rate": 1000.0,
-    "heat_level": "爆"
-  },
-  {
-    "id": 18,
-    "name": "航海王",
-    "category": "日本动漫",
-    "recent_views": 21160097,
-    "daily_avg": 7053365,
-    "growth_rate": 1000.0,
-    "heat_level": "爆"
-  },
-  {
-    "id": 53,
-    "name": "死神",
-    "category": "日本动漫",
-    "recent_views": 19398344,
-    "daily_avg": 6466114,
-    "growth_rate": 1000.0,
-    "heat_level": "爆"
-  },
-  {
-    "id": 21,
-    "name": "火影",
-    "category": "日本动漫",
-    "recent_views": 19277736,
-    "daily_avg": 6425912,
-    "growth_rate": 1000.0,
-    "heat_level": "爆"
-  },
-  {
-    "id": 76,
-    "name": "千与千寻",
-    "category": "日本动漫",
-    "recent_views": 18939494,
-    "daily_avg": 6313164,
-    "growth_rate": 1000.0,
-    "heat_level": "爆"
-  },
-  {
-    "id": 17,
-    "name": "柯南",
-    "category": "日本动漫",
-    "recent_views": 18113678,
-    "daily_avg": 6037892,
-    "growth_rate": 1000.0,
-    "heat_level": "爆"
-  },
-  {
-    "id": 65,
-    "name": "幽游白书",
-    "category": "日本动漫",
-    "recent_views": 17920989,
-    "daily_avg": 5973663,
-    "growth_rate": 1000.0,
-    "heat_level": "爆"
-  },
-  {
-    "id": 247,
-    "name": "线条小狗",
-    "category": "韩国IP",
-    "recent_views": 18054550,
-    "daily_avg": 6018183,
-    "growth_rate": 55.7,
+    "recent_views": 18128857,
+    "daily_avg": 6042952,
+    "growth_rate": 58.1,
     "heat_level": "爆"
   },
   {
     "id": 12,
     "name": "Chiikawa",
     "category": "日本动漫",
-    "recent_views": 26381044,
-    "daily_avg": 8793681,
+    "recent_views": 25803548,
+    "daily_avg": 8601182,
+    "growth_rate": 51.8,
+    "heat_level": "爆"
+  },
+  {
+    "id": 416,
+    "name": "米大圈",
+    "category": "国潮",
+    "recent_views": 10302331,
+    "daily_avg": 3434110,
+    "growth_rate": 51.5,
+    "heat_level": "爆"
+  },
+  {
+    "id": 250,
+    "name": "黄油小熊",
+    "category": "韩国IP",
+    "recent_views": 12056739,
+    "daily_avg": 4018913,
     "growth_rate": 47.6,
+    "heat_level": "热"
+  },
+  {
+    "id": 37,
+    "name": "葬送的芙莉莲",
+    "category": "日本动漫",
+    "recent_views": 15195170,
+    "daily_avg": 5065056,
+    "growth_rate": 46.6,
+    "heat_level": "热"
+  },
+  {
+    "id": 423,
+    "name": "星穹铁道",
+    "category": "游戏",
+    "recent_views": 15811385,
+    "daily_avg": 5270461,
+    "growth_rate": 44.3,
+    "heat_level": "热"
+  },
+  {
+    "id": 26,
+    "name": "间谍过家家",
+    "category": "日本动漫",
+    "recent_views": 11463266,
+    "daily_avg": 3821088,
+    "growth_rate": 39.5,
+    "heat_level": "热"
+  },
+  {
+    "id": 254,
+    "name": "迪士尼",
+    "category": "美国动画",
+    "recent_views": 10563370,
+    "daily_avg": 3521123,
+    "growth_rate": 39.5,
     "heat_level": "热"
   },
   {
     "id": 418,
     "name": "原神",
     "category": "游戏",
-    "recent_views": 18328762,
-    "daily_avg": 6109587,
-    "growth_rate": 31.8,
+    "recent_views": 19009177,
+    "daily_avg": 6336392,
+    "growth_rate": 37.5,
+    "heat_level": "热"
+  },
+  {
+    "id": 419,
+    "name": "蛋仔派对",
+    "category": "游戏",
+    "recent_views": 11700671,
+    "daily_avg": 3900223,
+    "growth_rate": 28.2,
+    "heat_level": "热"
+  },
+  {
+    "id": 247,
+    "name": "线条小狗",
+    "category": "韩国IP",
+    "recent_views": 16076411,
+    "daily_avg": 5358803,
+    "growth_rate": 24.6,
+    "heat_level": "热"
+  },
+  {
+    "id": 248,
+    "name": "Loopy",
+    "category": "韩国IP",
+    "recent_views": 13342496,
+    "daily_avg": 4447498,
+    "growth_rate": 22.4,
+    "heat_level": "热"
+  },
+  {
+    "id": 1,
+    "name": "三丽鸥",
+    "category": "日本动漫",
+    "recent_views": 14154056,
+    "daily_avg": 4718018,
+    "growth_rate": 20.0,
+    "heat_level": "热"
+  },
+  {
+    "id": 420,
+    "name": "王者荣耀",
+    "category": "游戏",
+    "recent_views": 10095786,
+    "daily_avg": 3365262,
+    "growth_rate": 19.1,
     "heat_level": "热"
   }
 ]

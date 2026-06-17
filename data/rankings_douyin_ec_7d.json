@@ -4,199 +4,199 @@
     "name": "三丽鸥",
     "name_en": "",
     "category": "日本动漫",
-    "total_sales": 69881,
-    "avg_price": 44.1,
-    "product_count": 112,
-    "revenue": 3081839
+    "total_sales": 41085,
+    "avg_price": 38.04,
+    "product_count": 32,
+    "revenue": 1562822
   },
   {
     "id": 12,
     "name": "Chiikawa",
     "name_en": "",
     "category": "日本动漫",
-    "total_sales": 66478,
-    "avg_price": 36.11,
-    "product_count": 160,
-    "revenue": 2400188
+    "total_sales": 34560,
+    "avg_price": 47.89,
+    "product_count": 72,
+    "revenue": 1655035
   },
   {
     "id": 254,
     "name": "迪士尼",
     "name_en": "",
     "category": "美国动画",
-    "total_sales": 52610,
-    "avg_price": 45.94,
-    "product_count": 112,
-    "revenue": 2416838
+    "total_sales": 27535,
+    "avg_price": 45.41,
+    "product_count": 32,
+    "revenue": 1250227
   },
   {
     "id": 2,
     "name": "库洛米",
     "name_en": "",
     "category": "日本动漫",
-    "total_sales": 45200,
-    "avg_price": 38.73,
-    "product_count": 96,
-    "revenue": 1750709
+    "total_sales": 24841,
+    "avg_price": 42.39,
+    "product_count": 80,
+    "revenue": 1052979
   },
   {
     "id": 247,
     "name": "线条小狗",
     "name_en": "",
     "category": "韩国IP",
-    "total_sales": 44959,
-    "avg_price": 43.17,
-    "product_count": 160,
-    "revenue": 1940880
+    "total_sales": 24419,
+    "avg_price": 34.98,
+    "product_count": 72,
+    "revenue": 854268
   },
   {
     "id": 248,
     "name": "Loopy",
     "name_en": "",
     "category": "韩国IP",
-    "total_sales": 36116,
-    "avg_price": 37.2,
-    "product_count": 128,
-    "revenue": 1343560
+    "total_sales": 21394,
+    "avg_price": 35.74,
+    "product_count": 136,
+    "revenue": 764702
   },
   {
     "id": 4,
     "name": "美乐蒂",
     "name_en": "",
     "category": "日本动漫",
-    "total_sales": 34575,
-    "avg_price": 46.24,
-    "product_count": 64,
-    "revenue": 1598662
+    "total_sales": 20389,
+    "avg_price": 31.08,
+    "product_count": 40,
+    "revenue": 633665
   },
   {
     "id": 7,
     "name": "玉桂狗",
     "name_en": "",
     "category": "日本动漫",
-    "total_sales": 31177,
-    "avg_price": 42.27,
-    "product_count": 64,
-    "revenue": 1317852
-  },
-  {
-    "id": 14,
-    "name": "蜡笔小新",
-    "name_en": "",
-    "category": "日本动漫",
-    "total_sales": 29959,
-    "avg_price": 46.91,
-    "product_count": 112,
-    "revenue": 1405414
-  },
-  {
-    "id": 250,
-    "name": "黄油小熊",
-    "name_en": "",
-    "category": "韩国IP",
-    "total_sales": 29728,
-    "avg_price": 39.9,
-    "product_count": 216,
-    "revenue": 1186222
+    "total_sales": 17530,
+    "avg_price": 38.62,
+    "product_count": 80,
+    "revenue": 677009
   },
   {
     "id": 32,
     "name": "宝可梦",
     "name_en": "",
     "category": "日本动漫",
-    "total_sales": 29541,
-    "avg_price": 44.49,
-    "product_count": 136,
-    "revenue": 1314353
+    "total_sales": 16894,
+    "avg_price": 44.89,
+    "product_count": 40,
+    "revenue": 758308
+  },
+  {
+    "id": 14,
+    "name": "蜡笔小新",
+    "name_en": "",
+    "category": "日本动漫",
+    "total_sales": 16346,
+    "avg_price": 45.13,
+    "product_count": 80,
+    "revenue": 737634
+  },
+  {
+    "id": 250,
+    "name": "黄油小熊",
+    "name_en": "",
+    "category": "韩国IP",
+    "total_sales": 15995,
+    "avg_price": 38.88,
+    "product_count": 128,
+    "revenue": 621966
   },
   {
     "id": 444,
     "name": "泡泡玛特",
     "name_en": "",
     "category": "潮玩",
-    "total_sales": 27431,
-    "avg_price": 40.93,
-    "product_count": 200,
-    "revenue": 1122854
+    "total_sales": 15820,
+    "avg_price": 39.41,
+    "product_count": 48,
+    "revenue": 623466
   },
   {
     "id": 419,
     "name": "蛋仔派对",
     "name_en": "",
     "category": "游戏",
-    "total_sales": 26600,
-    "avg_price": 43.54,
-    "product_count": 64,
-    "revenue": 1158131
-  },
-  {
-    "id": 31,
-    "name": "奥特曼",
-    "name_en": "",
-    "category": "日本动漫",
-    "total_sales": 24087,
-    "avg_price": 47.75,
-    "product_count": 40,
-    "revenue": 1150214
-  },
-  {
-    "id": 418,
-    "name": "原神",
-    "name_en": "",
-    "category": "游戏",
-    "total_sales": 23818,
-    "avg_price": 35.46,
+    "total_sales": 14924,
+    "avg_price": 47.22,
     "product_count": 56,
-    "revenue": 844527
-  },
-  {
-    "id": 450,
-    "name": "Labubu",
-    "name_en": "",
-    "category": "潮玩",
-    "total_sales": 22753,
-    "avg_price": 39.36,
-    "product_count": 80,
-    "revenue": 895501
+    "revenue": 704693
   },
   {
     "id": 8,
     "name": "凯蒂猫",
     "name_en": "",
     "category": "日本动漫",
-    "total_sales": 21661,
-    "avg_price": 46.55,
-    "product_count": 168,
-    "revenue": 1008320
+    "total_sales": 13256,
+    "avg_price": 47.88,
+    "product_count": 96,
+    "revenue": 634764
   },
   {
     "id": 5,
     "name": "帕恰狗",
     "name_en": "",
     "category": "日本动漫",
-    "total_sales": 21596,
-    "avg_price": 40.5,
-    "product_count": 128,
-    "revenue": 874746
+    "total_sales": 13033,
+    "avg_price": 42.52,
+    "product_count": 32,
+    "revenue": 554098
   },
   {
-    "id": 224,
-    "name": "草莓熊",
+    "id": 450,
+    "name": "Labubu",
+    "name_en": "",
+    "category": "潮玩",
+    "total_sales": 12423,
+    "avg_price": 35.52,
+    "product_count": 64,
+    "revenue": 441203
+  },
+  {
+    "id": 31,
+    "name": "奥特曼",
     "name_en": "",
     "category": "日本动漫",
-    "total_sales": 21055,
-    "avg_price": 28.45,
-    "product_count": 144,
-    "revenue": 599067
+    "total_sales": 12405,
+    "avg_price": 41.47,
+    "product_count": 32,
+    "revenue": 514373
   },
   {
-    "id": 276,
-    "name": "史迪奇",
+    "id": 34,
+    "name": "角落生物",
     "name_en": "",
-    "category": "美国动画",
-    "total_sales": 20550,
-    "avg_price": 37.4,
-    "product_count": 72,
-    "revenue": 768621
+    "category": "日本动漫",
+    "total_sales": 12275,
+    "avg_price": 41.81,
+    "product_count": 40,
+    "revenue": 513279
+  },
+  {
+    "id": 418,
+    "name": "原神",
+    "name_en": "",
+    "category": "游戏",
+    "total_sales": 12216,
+    "avg_price": 36.76,
+    "product_count": 16,
+    "revenue": 449060
+  },
+  {
+    "id": 6,
+    "name": "大耳狗",
+    "name_en": "",
+    "category": "日本动漫",
+    "total_sales": 11871,
+    "avg_price": 44.64,
+    "product_count": 48,
+    "revenue": 529951
   }
 ]
