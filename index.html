@@ -20,6 +20,7 @@
         .platform-pdd { color: #e02e24; }
         .platform-douyin_ec { color: #111111; font-weight: 600; }
         .tab-active { border-bottom: 2px solid #6366f1; color: #6366f1; font-weight: 600; }
+        .period-active { background: #6366f1 !important; color: white !important; }
     </style>
 </head>
 <body class="min-h-screen">
@@ -87,10 +88,18 @@
             <div class="lg:col-span-2">
                 <div class="card">
                     <div class="border-b border-gray-100 px-5 pt-4">
-                        <div class="flex gap-6">
-                            <button class="tab-btn tab-active pb-3 text-sm" data-tab="ranking">电商销售排行</button>
-                            <button class="tab-btn pb-3 text-sm text-gray-500" data-tab="trend">销售趋势</button>
-                            <button class="tab-btn pb-3 text-sm text-gray-500" data-tab="emerging">新兴IP</button>
+                        <div class="flex items-center justify-between">
+                            <div class="flex gap-6">
+                                <button class="tab-btn tab-active pb-3 text-sm" data-tab="ranking">电商销售排行</button>
+                                <button class="tab-btn pb-3 text-sm text-gray-500" data-tab="trend">销售趋势</button>
+                                <button class="tab-btn pb-3 text-sm text-gray-500" data-tab="emerging">新兴IP</button>
+                            </div>
+                            <!-- 时间段筛选 -->
+                            <div class="flex gap-1 pb-3">
+                                <button class="period-btn px-3 py-1 text-xs rounded-full bg-gray-100 text-gray-600" data-period="1d">当日</button>
+                                <button class="period-btn period-active px-3 py-1 text-xs rounded-full" data-period="7d">近7天</button>
+                                <button class="period-btn px-3 py-1 text-xs rounded-full bg-gray-100 text-gray-600" data-period="30d">近30天</button>
+                            </div>
                         </div>
                     </div>
                     <div class="p-5">
@@ -115,7 +124,7 @@
                     <div id="radarChart" style="height: 280px;"></div>
                 </div>
                 <div class="card p-5">
-                    <h3 class="text-sm font-semibold text-gray-700 mb-3">平台分布对比</h3>
+                    <h3 class="text-sm font-semibold text-gray-700 mb-3">平台销售额对比</h3>
                     <div id="platformChart" style="height: 250px;"></div>
                 </div>
             </div>
@@ -123,8 +132,13 @@
 
         <!-- 商品表 -->
         <div class="card">
-            <div class="px-5 py-4 border-b border-gray-100">
-                <h3 class="text-sm font-semibold text-gray-700">热门商品</h3>
+            <div class="px-5 py-4 border-b border-gray-100 flex items-center justify-between">
+                <h3 class="text-sm font-semibold text-gray-700">热门商品明细</h3>
+                <div class="flex gap-1">
+                    <button class="prod-period-btn px-3 py-1 text-xs rounded-full bg-gray-100 text-gray-600" data-pp="1d">当日</button>
+                    <button class="prod-period-btn period-active px-3 py-1 text-xs rounded-full" data-pp="7d">近7天</button>
+                    <button class="prod-period-btn px-3 py-1 text-xs rounded-full bg-gray-100 text-gray-600" data-pp="30d">近30天</button>
+                </div>
             </div>
             <div class="overflow-x-auto">
                 <table class="w-full text-sm">
@@ -133,8 +147,9 @@
                             <th class="px-5 py-3 text-left font-medium">商品</th>
                             <th class="px-5 py-3 text-left font-medium">IP</th>
                             <th class="px-5 py-3 text-left font-medium">平台</th>
-                            <th class="px-5 py-3 text-right font-medium">价格</th>
-                            <th class="px-5 py-3 text-right font-medium">月销量</th>
+                            <th class="px-5 py-3 text-right font-medium">单价</th>
+                            <th class="px-5 py-3 text-right font-medium">销量</th>
+                            <th class="px-5 py-3 text-right font-medium">销售额</th>
                         </tr>
                     </thead>
                     <tbody id="productTable" class="divide-y divide-gray-50"></tbody>
@@ -144,27 +159,31 @@
     </main>
 
 <script>
-// ===== 数据加载（从静态JSON文件） =====
 const DATA_BASE = './data';
+let currentPlatform = 'all';
+let currentPeriod = '7d';
+let currentProdPeriod = '7d';
+
 async function loadJSON(file) {
-    try {
-        const resp = await fetch(`${DATA_BASE}/${file}`);
-        if (!resp.ok) return null;
-        return await resp.json();
-    } catch(e) { console.error(e); return null; }
+    try { const r = await fetch(`${DATA_BASE}/${file}`); if(!r.ok) return null; return await r.json(); }
+    catch(e) { return null; }
 }
 
-// ===== 工具函数 =====
-function formatNumber(num) {
-    if (num >= 100000000) return (num / 100000000).toFixed(1) + '亿';
-    if (num >= 10000) return (num / 10000).toFixed(1) + '万';
-    return num.toLocaleString();
+function formatNumber(n) {
+    if (n >= 100000000) return (n/100000000).toFixed(1)+'亿';
+    if (n >= 10000) return (n/10000).toFixed(1)+'万';
+    return n.toLocaleString();
 }
+function formatMoney(n) {
+    if (n >= 100000000) return '¥'+(n/100000000).toFixed(2)+'亿';
+    if (n >= 10000) return '¥'+(n/10000).toFixed(1)+'万';
+    return '¥'+n.toLocaleString();
+}
+
 const COLORS = ['#6366f1','#ec4899','#f59e0b','#10b981','#06b6d4','#8b5cf6','#f43f5e','#14b8a6','#f97316','#6b7280','#84cc16','#a855f7','#0ea5e9','#e11d48','#059669'];
 const PLATFORM_NAMES = {taobao:'淘宝/天猫',jd:'京东',pdd:'拼多多',douyin_ec:'抖音电商'};
 const PLATFORM_COLORS = {taobao:'#ff5000',jd:'#e1251b',pdd:'#e02e24',douyin_ec:'#111111'};
 
-// ===== 图表 =====
 let rankingChart, trendChart, radarChart, platformChart, hotwordRankChart, hotwordTrendChart;
 
 function initCharts() {
@@ -174,19 +193,22 @@ function initCharts() {
     platformChart = echarts.init(document.getElementById('platformChart'));
     hotwordRankChart = echarts.init(document.getElementById('hotwordRankChart'));
     hotwordTrendChart = echarts.init(document.getElementById('hotwordTrendChart'));
-    window.addEventListener('resize', () => { [rankingChart,trendChart,radarChart,platformChart,hotwordRankChart,hotwordTrendChart].forEach(c=>c&&c.resize()); });
+    window.addEventListener('resize', ()=>{[rankingChart,trendChart,radarChart,platformChart,hotwordRankChart,hotwordTrendChart].forEach(c=>c&&c.resize());});
 }
 
-function renderBarChart(chart, data, valueKey, labelFn) {
-    if (!data||!data.length) { chart.setOption({title:{text:'暂无数据',left:'center',top:'middle',textStyle:{color:'#94a3b8'}}}); return; }
+function renderRankingChart(data) {
+    if (!data||!data.length) { rankingChart.setOption({title:{text:'暂无数据',left:'center',top:'middle',textStyle:{color:'#94a3b8'}}}); return; }
     const names = data.map(d=>d.name).reverse();
-    const values = data.map(d=>d[valueKey]).reverse();
-    chart.setOption({
-        tooltip:{trigger:'axis',axisPointer:{type:'shadow'},formatter:labelFn},
-        grid:{left:90,right:80,top:10,bottom:30},
-        xAxis:{type:'value',axisLabel:{formatter:v=>formatNumber(v)}},
+    const revenues = data.map(d=>d.revenue||0).reverse();
+    rankingChart.setOption({
+        tooltip:{trigger:'axis',axisPointer:{type:'shadow'},formatter:(p)=>{
+            const d=data[data.length-1-p[0].dataIndex];
+            return `<b>${d.name}</b> (${d.category})<br/>销量: ${formatNumber(d.total_sales)}<br/>均价: ¥${d.avg_price}<br/><b>销售额: ${formatMoney(d.revenue||0)}</b>`;
+        }},
+        grid:{left:90,right:90,top:10,bottom:30},
+        xAxis:{type:'value',axisLabel:{formatter:v=>formatMoney(v)}},
         yAxis:{type:'category',data:names,axisLabel:{fontSize:11}},
-        series:[{type:'bar',data:values.map((v,i)=>{const r=v/(values[values.length-1]||1);return{value:v,itemStyle:{color:r>0.8?'#ef4444':r>0.5?'#f59e0b':'#6366f1',borderRadius:[0,4,4,0]}};}),barWidth:'55%',label:{show:true,position:'right',formatter:p=>formatNumber(p.value),fontSize:10,color:'#6b7280'}}]
+        series:[{type:'bar',data:revenues.map((v,i)=>{const r=v/(revenues[revenues.length-1]||1);return{value:v,itemStyle:{color:r>0.8?'#ef4444':r>0.5?'#f59e0b':'#6366f1',borderRadius:[0,4,4,0]}};}),barWidth:'55%',label:{show:true,position:'right',formatter:p=>formatMoney(p.value),fontSize:10,color:'#6b7280'}}]
     });
 }
 
@@ -195,32 +217,51 @@ function renderLineChart(chart, data) {
     const series=[],legend=[];let allDates=new Set();
     Object.entries(data).forEach(([name,info],idx)=>{
         legend.push(name);
-        const key = info.dates ? 'dates' : Object.keys(info).find(k=>Array.isArray(info[k]));
-        const valKey = info.sales ? 'sales' : (info.views ? 'views' : 'sales');
+        const valKey=info.sales?'sales':(info.views?'views':'sales');
         (info.dates||[]).forEach(d=>allDates.add(d));
         series.push({name,type:'line',smooth:true,symbol:'circle',symbolSize:4,lineStyle:{width:2.5},color:COLORS[idx%COLORS.length],areaStyle:{opacity:0.05},data:(info.dates||[]).map((d,i)=>[d,(info[valKey]||[])[i]])});
     });
     chart.setOption({tooltip:{trigger:'axis'},legend:{data:legend,bottom:0,textStyle:{fontSize:10}},grid:{left:70,right:20,top:20,bottom:45},xAxis:{type:'category',data:[...allDates].sort(),axisLabel:{fontSize:10}},yAxis:{type:'value',axisLabel:{formatter:v=>formatNumber(v)}},series});
 }
 
-// ===== 主逻辑 =====
+async function loadRankings() {
+    const data = await loadJSON(`rankings_${currentPlatform}_${currentPeriod}.json`);
+    if (data) {
+        renderRankingChart(data);
+        // Radar
+        const top5=data.slice(0,5);
+        const ms=Math.max(...top5.map(d=>d.total_sales))||1;
+        const mp=Math.max(...top5.map(d=>d.product_count))||1;
+        const mr=Math.max(...top5.map(d=>d.revenue||0))||1;
+        radarChart.setOption({legend:{data:top5.map(d=>d.name),bottom:0,textStyle:{fontSize:10}},radar:{indicator:[{name:'销量',max:100},{name:'销售额',max:100},{name:'商品数',max:100},{name:'均价',max:100}],radius:'60%'},series:[{type:'radar',data:top5.map((d,i)=>({name:d.name,value:[(d.total_sales/ms*100).toFixed(0),((d.revenue||0)/mr*100).toFixed(0),(d.product_count/mp*100).toFixed(0),(d.avg_price/80*100).toFixed(0)],lineStyle:{color:COLORS[i]},areaStyle:{color:COLORS[i],opacity:0.1},itemStyle:{color:COLORS[i]}}))}]});
+    }
+}
+
+async function loadProducts() {
+    const data = await loadJSON(`products_${currentProdPeriod}.json`);
+    const tbody = document.getElementById('productTable');
+    if (!data||!data.length) { tbody.innerHTML='<tr><td colspan="6" class="px-5 py-8 text-center text-gray-400">暂无数据</td></tr>'; return; }
+    const pm={taobao:'淘宝',jd:'京东',pdd:'拼多多',douyin_ec:'抖音电商'};
+    tbody.innerHTML = data.slice(0,30).map(p=>`<tr class="hover:bg-gray-50">
+        <td class="px-5 py-3 max-w-xs truncate" title="${p.title}">${p.title.length>35?p.title.slice(0,35)+'...':p.title}</td>
+        <td class="px-5 py-3"><span class="px-2 py-0.5 text-xs rounded-full bg-indigo-50 text-indigo-700">${p.ip_name}</span></td>
+        <td class="px-5 py-3 platform-${p.platform} text-xs font-medium">${pm[p.platform]||p.platform}</td>
+        <td class="px-5 py-3 text-right">¥${p.price.toFixed(2)}</td>
+        <td class="px-5 py-3 text-right">${formatNumber(p.monthly_sales)}</td>
+        <td class="px-5 py-3 text-right font-semibold text-indigo-600">${formatMoney(p.revenue||p.price*p.monthly_sales)}</td>
+    </tr>`).join('');
+}
+
 document.addEventListener('DOMContentLoaded', async () => {
     initCharts();
 
-    // Load all data
-    const [summary, rankings, trends, emerging, hotwords, hwTrends, hotDisc, products, platformCmp] = await Promise.all([
-        loadJSON('summary.json'),
-        loadJSON('rankings_all.json'),
-        loadJSON('trends.json'),
-        loadJSON('emerging.json'),
-        loadJSON('hotwords_all.json'),
-        loadJSON('hotword_trends.json'),
-        loadJSON('hot_discovery.json'),
-        loadJSON('products.json'),
-        loadJSON('platform_compare.json'),
+    // Load initial data
+    const [summary, trends, emerging, hotwords, hwTrends, hotDisc, platformCmp] = await Promise.all([
+        loadJSON('summary.json'), loadJSON('trends.json'), loadJSON('emerging.json'),
+        loadJSON('hotwords_all.json'), loadJSON('hotword_trends.json'),
+        loadJSON('hot_discovery.json'), loadJSON('platform_compare.json'),
     ]);
 
-    // Summary
     if (summary) {
         document.getElementById('totalIPs').textContent = summary.total_ips;
         document.getElementById('hottestIP').textContent = summary.hottest_ip;
@@ -230,38 +271,33 @@ document.addEventListener('DOMContentLoaded', async () => {
         document.getElementById('lastUpdated').textContent = `数据更新: ${summary.last_updated}`;
     }
 
-    // Charts
-    if (rankings) {
-        renderBarChart(rankingChart, rankings, 'total_sales', p=>{const d=rankings[rankings.length-1-p[0].dataIndex];return `<b>${d.name}</b><br/>分类:${d.category}<br/>销量:${formatNumber(d.total_sales)}<br/>均价:¥${d.avg_price}`;});
-        // Radar
-        const top5=rankings.slice(0,5); const ms=Math.max(...top5.map(d=>d.total_sales))||1; const mp=Math.max(...top5.map(d=>d.product_count))||1;
-        radarChart.setOption({legend:{data:top5.map(d=>d.name),bottom:0,textStyle:{fontSize:10}},radar:{indicator:[{name:'销量',max:100},{name:'商品数',max:100},{name:'均价',max:100},{name:'热度',max:100}],radius:'60%'},series:[{type:'radar',data:top5.map((d,i)=>({name:d.name,value:[(d.total_sales/ms*100).toFixed(0),(d.product_count/mp*100).toFixed(0),(d.avg_price/80*100).toFixed(0),70-i*10],lineStyle:{color:COLORS[i]},areaStyle:{color:COLORS[i],opacity:0.1},itemStyle:{color:COLORS[i]}}))}]});
-    }
+    await loadRankings();
+    await loadProducts();
+
     if (trends) renderLineChart(trendChart, trends);
-    if (hotwords) renderBarChart(hotwordRankChart, hotwords, 'total_views', p=>{const d=hotwords[hotwords.length-1-p[0].dataIndex];return `<b>${d.name}</b><br/>曝光:${formatNumber(d.total_views)}<br/>视频:${formatNumber(d.total_videos)}<br/>点赞:${formatNumber(d.total_likes)}`;});
+    if (hotwords) {
+        const chart = hotwordRankChart;
+        const d = hotwords;
+        if(d&&d.length){const names=d.map(x=>x.name).reverse();const vals=d.map(x=>x.total_views).reverse();chart.setOption({tooltip:{trigger:'axis',axisPointer:{type:'shadow'},formatter:p=>{const x=d[d.length-1-p[0].dataIndex];return`<b>${x.name}</b><br/>曝光:${formatNumber(x.total_views)}<br/>视频:${formatNumber(x.total_videos)}<br/>点赞:${formatNumber(x.total_likes)}`;}},grid:{left:90,right:80,top:10,bottom:30},xAxis:{type:'value',axisLabel:{formatter:v=>formatNumber(v)}},yAxis:{type:'category',data:names,axisLabel:{fontSize:11}},series:[{type:'bar',data:vals.map((v,i)=>{const r=v/(vals[vals.length-1]||1);return{value:v,itemStyle:{color:r>0.8?'#ef4444':r>0.5?'#f59e0b':'#6366f1',borderRadius:[0,4,4,0]}};}),barWidth:'55%',label:{show:true,position:'right',formatter:p=>formatNumber(p.value),fontSize:10,color:'#6b7280'}}]});}
+    }
     if (hwTrends) renderLineChart(hotwordTrendChart, hwTrends);
     if (platformCmp && platformCmp.length) {
-        platformChart.setOption({tooltip:{trigger:'axis'},grid:{left:60,right:20,top:10,bottom:30},xAxis:{type:'category',data:platformCmp.map(d=>PLATFORM_NAMES[d.platform]||d.platform)},yAxis:{type:'value'},series:[{type:'bar',data:platformCmp.map(d=>({value:d.total_sales,itemStyle:{color:PLATFORM_COLORS[d.platform]||'#6b7280',borderRadius:[4,4,0,0]}})),barWidth:'50%'}]});
+        platformChart.setOption({tooltip:{trigger:'axis',formatter:p=>{const d=platformCmp[p[0].dataIndex];return`${PLATFORM_NAMES[d.platform]}<br/>销量:${formatNumber(d.total_sales)}<br/>销售额:${formatMoney(d.total_sales*(d.avg_price||0))}`;} },grid:{left:60,right:20,top:10,bottom:30},xAxis:{type:'category',data:platformCmp.map(d=>PLATFORM_NAMES[d.platform]||d.platform)},yAxis:{type:'value',axisLabel:{formatter:v=>formatMoney(v)}},series:[{type:'bar',data:platformCmp.map(d=>({value:d.total_sales*(d.avg_price||0),itemStyle:{color:PLATFORM_COLORS[d.platform]||'#6b7280',borderRadius:[4,4,0,0]}})),barWidth:'50%'}]});
     }
 
-    // Emerging list
+    // Emerging
     if (emerging && emerging.length) {
-        const typeMap={emerging:'新兴',hot:'热门',growing:'增长'};
-        document.getElementById('emergingList').innerHTML = `<div class="space-y-3">${emerging.map(e=>`<div class="flex items-center justify-between p-3 rounded-lg bg-gray-50"><div class="flex items-center gap-3"><span class="px-2 py-0.5 text-xs rounded-full badge-${e.alert_type}">${typeMap[e.alert_type]||e.alert_type}</span><span class="font-medium">${e.ip_name}</span><span class="text-xs text-gray-500">${e.category}</span></div><span class="text-sm font-mono ${e.score>70?'text-red-500':'text-amber-500'}">${e.score}分</span></div>`).join('')}</div>`;
+        const tm={emerging:'新兴',hot:'热门',growing:'增长'};
+        document.getElementById('emergingList').innerHTML=`<div class="space-y-3">${emerging.map(e=>`<div class="flex items-center justify-between p-3 rounded-lg bg-gray-50"><div class="flex items-center gap-3"><span class="px-2 py-0.5 text-xs rounded-full badge-${e.alert_type}">${tm[e.alert_type]||e.alert_type}</span><span class="font-medium">${e.ip_name}</span><span class="text-xs text-gray-500">${e.category}</span></div><span class="text-sm font-mono ${e.score>70?'text-red-500':'text-amber-500'}">${e.score}分</span></div>`).join('')}</div>`;
     }
-
     // Hot discovery
     if (hotDisc && hotDisc.length) {
-        document.getElementById('hotDiscoveryList').innerHTML = `<div class="mb-3 text-xs text-gray-500">基于近3天曝光增速排序</div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">${hotDisc.map((h,i)=>`<div class="p-4 rounded-lg border ${i<3?'border-red-200 bg-red-50/50':'border-gray-100 bg-gray-50/50'}"><div class="flex items-center justify-between mb-2"><div class="flex items-center gap-2"><span class="text-lg font-bold ${i<3?'text-red-500':'text-gray-700'}">#${i+1}</span><span class="font-semibold">${h.name}</span></div><span class="px-2 py-0.5 text-xs rounded-full heat-${h.heat_level==='爆'?'bao':h.heat_level==='热'?'hot':'stable'}">${h.heat_level}</span></div><div class="flex items-center justify-between text-xs"><span class="text-gray-500">${h.category}</span><span class="${h.growth_rate>0?'text-red-500':'text-green-500'} font-medium">${h.growth_rate>0?'↑':'↓'}${Math.abs(h.growth_rate)}%</span></div></div>`).join('')}</div>`;
+        document.getElementById('hotDiscoveryList').innerHTML=`<div class="mb-3 text-xs text-gray-500">基于近3天曝光增速排序</div><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">${hotDisc.map((h,i)=>`<div class="p-4 rounded-lg border ${i<3?'border-red-200 bg-red-50/50':'border-gray-100 bg-gray-50/50'}"><div class="flex items-center justify-between mb-2"><div class="flex items-center gap-2"><span class="text-lg font-bold ${i<3?'text-red-500':'text-gray-700'}">#${i+1}</span><span class="font-semibold">${h.name}</span></div><span class="px-2 py-0.5 text-xs rounded-full heat-${h.heat_level==='爆'?'bao':h.heat_level==='热'?'hot':'stable'}">${h.heat_level}</span></div><div class="flex items-center justify-between text-xs"><span class="text-gray-500">${h.category}</span><span class="${h.growth_rate>0?'text-red-500':'text-green-500'} font-medium">${h.growth_rate>0?'↑':'↓'}${Math.abs(h.growth_rate)}%</span></div></div>`).join('')}</div>`;
     }
 
-    // Products
-    if (products && products.length) {
-        const pm={taobao:'淘宝',jd:'京东',pdd:'拼多多',douyin_ec:'抖音电商'};
-        document.getElementById('productTable').innerHTML = products.slice(0,30).map(p=>`<tr class="hover:bg-gray-50"><td class="px-5 py-3 max-w-xs truncate">${p.title}</td><td class="px-5 py-3"><span class="px-2 py-0.5 text-xs rounded-full bg-indigo-50 text-indigo-700">${p.ip_name}</span></td><td class="px-5 py-3 platform-${p.platform} text-xs font-medium">${pm[p.platform]||p.platform}</td><td class="px-5 py-3 text-right">¥${p.price.toFixed(2)}</td><td class="px-5 py-3 text-right">${p.monthly_sales.toLocaleString()}</td></tr>`).join('');
-    }
+    // === 事件绑定 ===
 
-    // Tab switching
+    // 电商Tab切换
     document.querySelectorAll('.tab-btn').forEach(btn=>btn.addEventListener('click',()=>{
         document.querySelectorAll('.tab-btn').forEach(b=>{b.classList.remove('tab-active');b.classList.add('text-gray-500');});
         btn.classList.add('tab-active');btn.classList.remove('text-gray-500');
@@ -271,6 +307,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         document.getElementById('tab-emerging').classList.toggle('hidden',t!=='emerging');
         if(t==='trend')trendChart.resize();if(t==='ranking')rankingChart.resize();
     }));
+    // 内容Tab切换
     document.querySelectorAll('.content-tab-btn').forEach(btn=>btn.addEventListener('click',()=>{
         document.querySelectorAll('.content-tab-btn').forEach(b=>{b.classList.remove('tab-active');b.classList.add('text-gray-500');});
         btn.classList.add('tab-active');btn.classList.remove('text-gray-500');
@@ -280,19 +317,33 @@ document.addEventListener('DOMContentLoaded', async () => {
         document.getElementById('ctab-hot-discovery').classList.toggle('hidden',t!=='hot-discovery');
         if(t==='hotword-rank')hotwordRankChart.resize();if(t==='hotword-trend')hotwordTrendChart.resize();
     }));
-
-    // Platform filter (load different JSON)
+    // 电商平台筛选
     document.querySelectorAll('.platform-btn').forEach(btn=>btn.addEventListener('click',async()=>{
         document.querySelectorAll('.platform-btn').forEach(b=>{b.className='platform-btn px-3 py-1 text-xs rounded-full bg-gray-100 text-gray-600';});
         btn.className='platform-btn px-3 py-1 text-xs rounded-full bg-indigo-100 text-indigo-700';
-        const d=await loadJSON(`rankings_${btn.dataset.platform}.json`);
-        if(d)renderBarChart(rankingChart,d,'total_sales');
+        currentPlatform=btn.dataset.platform;
+        await loadRankings();
     }));
+    // 时间段筛选（排行榜）
+    document.querySelectorAll('.period-btn').forEach(btn=>btn.addEventListener('click',async()=>{
+        document.querySelectorAll('.period-btn').forEach(b=>{b.classList.remove('period-active');b.className='period-btn px-3 py-1 text-xs rounded-full bg-gray-100 text-gray-600';});
+        btn.classList.add('period-active');
+        currentPeriod=btn.dataset.period;
+        await loadRankings();
+    }));
+    // 时间段筛选（商品表）
+    document.querySelectorAll('.prod-period-btn').forEach(btn=>btn.addEventListener('click',async()=>{
+        document.querySelectorAll('.prod-period-btn').forEach(b=>{b.classList.remove('period-active');b.className='prod-period-btn px-3 py-1 text-xs rounded-full bg-gray-100 text-gray-600';});
+        btn.classList.add('period-active');
+        currentProdPeriod=btn.dataset.pp;
+        await loadProducts();
+    }));
+    // 内容平台筛选
     document.querySelectorAll('.content-platform-btn').forEach(btn=>btn.addEventListener('click',async()=>{
         document.querySelectorAll('.content-platform-btn').forEach(b=>{b.className='content-platform-btn px-3 py-1 text-xs rounded-full bg-gray-100 text-gray-600';});
         btn.className='content-platform-btn px-3 py-1 text-xs rounded-full bg-gray-900 text-white';
         const d=await loadJSON(`hotwords_${btn.dataset.cplatform}.json`);
-        if(d)renderBarChart(hotwordRankChart,d,'total_views');
+        if(d&&d.length){const names=d.map(x=>x.name).reverse();const vals=d.map(x=>x.total_views).reverse();hotwordRankChart.setOption({tooltip:{trigger:'axis',axisPointer:{type:'shadow'}},grid:{left:90,right:80,top:10,bottom:30},xAxis:{type:'value',axisLabel:{formatter:v=>formatNumber(v)}},yAxis:{type:'category',data:names,axisLabel:{fontSize:11}},series:[{type:'bar',data:vals.map((v,i)=>{const r=v/(vals[vals.length-1]||1);return{value:v,itemStyle:{color:r>0.8?'#ef4444':r>0.5?'#f59e0b':'#6366f1',borderRadius:[0,4,4,0]}};}),barWidth:'55%',label:{show:true,position:'right',formatter:p=>formatNumber(p.value),fontSize:10,color:'#6b7280'}}]});}
     }));
 });
 </script>

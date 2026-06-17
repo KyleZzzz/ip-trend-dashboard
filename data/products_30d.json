@@ -1,0 +1,502 @@
+[
+  {
+    "platform": "douyin_ec",
+    "title": "角落生物便利贴套装卡通可爱便签纸",
+    "price": 155.2,
+    "shop_name": "爱好文具旗舰店",
+    "ip_name": "角落生物",
+    "monthly_sales": 28283,
+    "revenue": 4389522,
+    "url": "https://example.com/douyin_ec/34/0"
+  },
+  {
+    "platform": "jd",
+    "title": "角落生物橡皮擦可爱卡通造型学生",
+    "price": 44.52,
+    "shop_name": "国誉文具旗舰店",
+    "ip_name": "角落生物",
+    "monthly_sales": 28279,
+    "revenue": 1258981,
+    "url": "https://example.com/jd/34/0"
+  },
+  {
+    "platform": "pdd",
+    "title": "三丽鸥橡皮擦可爱卡通造型学生",
+    "price": 38.71,
+    "shop_name": "M&G精品文具店",
+    "ip_name": "三丽鸥",
+    "monthly_sales": 20762,
+    "revenue": 803697,
+    "url": "https://example.com/pdd/1/12"
+  },
+  {
+    "platform": "jd",
+    "title": "角落生物书签金属创意卡通书签",
+    "price": 17.15,
+    "shop_name": "M&G精品文具店",
+    "ip_name": "角落生物",
+    "monthly_sales": 20614,
+    "revenue": 353530,
+    "url": "https://example.com/jd/34/1"
+  },
+  {
+    "platform": "pdd",
+    "title": "三丽鸥便利贴套装卡通可爱便签纸",
+    "price": 58.07,
+    "shop_name": "爱好文具旗舰店",
+    "ip_name": "三丽鸥",
+    "monthly_sales": 20368,
+    "revenue": 1182770,
+    "url": "https://example.com/pdd/1/0"
+  },
+  {
+    "platform": "pdd",
+    "title": "美乐蒂正版授权笔袋大容量学生文具盒",
+    "price": 7.59,
+    "shop_name": "猫太子旗舰店",
+    "ip_name": "美乐蒂",
+    "monthly_sales": 19938,
+    "revenue": 151329,
+    "url": "https://example.com/pdd/4/2"
+  },
+  {
+    "platform": "pdd",
+    "title": "美乐蒂便利贴套装卡通可爱便签纸",
+    "price": 140.96,
+    "shop_name": "国潮文创旗舰店",
+    "ip_name": "美乐蒂",
+    "monthly_sales": 19815,
+    "revenue": 2793122,
+    "url": "https://example.com/pdd/4/4"
+  },
+  {
+    "platform": "taobao",
+    "title": "三丽鸥文具套装礼盒学生开学礼物",
+    "price": 35.3,
+    "shop_name": "樱花文具旗舰店",
+    "ip_name": "三丽鸥",
+    "monthly_sales": 19491,
+    "revenue": 688032,
+    "url": "https://example.com/taobao/1/3"
+  },
+  {
+    "platform": "douyin_ec",
+    "title": "三丽鸥联名中性笔按动黑色水笔套装",
+    "price": 71.03,
+    "shop_name": "卡通梦工厂",
+    "ip_name": "三丽鸥",
+    "monthly_sales": 19466,
+    "revenue": 1382670,
+    "url": "https://example.com/douyin_ec/1/1"
+  },
+  {
+    "platform": "jd",
+    "title": "三丽鸥卷笔刀创意可爱削笔器",
+    "price": 29.2,
+    "shop_name": "IP潮玩文具店",
+    "ip_name": "三丽鸥",
+    "monthly_sales": 19425,
+    "revenue": 567210,
+    "url": "https://example.com/jd/1/5"
+  },
+  {
+    "platform": "jd",
+    "title": "三丽鸥贴纸手账素材装饰贴画",
+    "price": 14.48,
+    "shop_name": "齐心文具旗舰店",
+    "ip_name": "三丽鸥",
+    "monthly_sales": 19310,
+    "revenue": 279609,
+    "url": "https://example.com/jd/1/2"
+  },
+  {
+    "platform": "douyin_ec",
+    "title": "三丽鸥联名中性笔按动黑色水笔套装",
+    "price": 95.25,
+    "shop_name": "M&G精品文具店",
+    "ip_name": "三丽鸥",
+    "monthly_sales": 19090,
+    "revenue": 1818322,
+    "url": "https://example.com/douyin_ec/1/8"
+  },
+  {
+    "platform": "taobao",
+    "title": "三丽鸥书签金属创意卡通书签",
+    "price": 16.81,
+    "shop_name": "迪士尼文具旗舰店",
+    "ip_name": "三丽鸥",
+    "monthly_sales": 18996,
+    "revenue": 319323,
+    "url": "https://example.com/taobao/1/2"
+  },
+  {
+    "platform": "taobao",
+    "title": "三丽鸥修正带大容量涂改带学生",
+    "price": 82.9,
+    "shop_name": "广博旗舰店",
+    "ip_name": "三丽鸥",
+    "monthly_sales": 18381,
+    "revenue": 1523785,
+    "url": "https://example.com/taobao/1/4"
+  },
+  {
+    "platform": "pdd",
+    "title": "三丽鸥文具套装礼盒学生开学礼物",
+    "price": 158.29,
+    "shop_name": "晨光官方旗舰店",
+    "ip_name": "三丽鸥",
+    "monthly_sales": 18203,
+    "revenue": 2881353,
+    "url": "https://example.com/pdd/1/11"
+  },
+  {
+    "platform": "pdd",
+    "title": "三丽鸥桌面收纳盒学生文具收纳",
+    "price": 7.56,
+    "shop_name": "齐心文具旗舰店",
+    "ip_name": "三丽鸥",
+    "monthly_sales": 18087,
+    "revenue": 136738,
+    "url": "https://example.com/pdd/1/8"
+  },
+  {
+    "platform": "taobao",
+    "title": "三丽鸥便利贴套装卡通可爱便签纸",
+    "price": 142.86,
+    "shop_name": "真彩文具旗舰店",
+    "ip_name": "三丽鸥",
+    "monthly_sales": 18065,
+    "revenue": 2580766,
+    "url": "https://example.com/taobao/1/14"
+  },
+  {
+    "platform": "taobao",
+    "title": "三丽鸥修正带大容量涂改带学生",
+    "price": 41.79,
+    "shop_name": "迪士尼文具旗舰店",
+    "ip_name": "三丽鸥",
+    "monthly_sales": 18032,
+    "revenue": 753557,
+    "url": "https://example.com/taobao/1/13"
+  },
+  {
+    "platform": "jd",
+    "title": "蛋仔派对书立金属学生桌面书架",
+    "price": 40.97,
+    "shop_name": "M&G精品文具店",
+    "ip_name": "蛋仔派对",
+    "monthly_sales": 17827,
+    "revenue": 730372,
+    "url": "https://example.com/jd/419/3"
+  },
+  {
+    "platform": "jd",
+    "title": "蛋仔派对便利贴套装卡通可爱便签纸",
+    "price": 142.62,
+    "shop_name": "真彩文具旗舰店",
+    "ip_name": "蛋仔派对",
+    "monthly_sales": 17813,
+    "revenue": 2540490,
+    "url": "https://example.com/jd/419/0"
+  },
+  {
+    "platform": "taobao",
+    "title": "美乐蒂修正带大容量涂改带学生",
+    "price": 33.21,
+    "shop_name": "真彩文具旗舰店",
+    "ip_name": "美乐蒂",
+    "monthly_sales": 17783,
+    "revenue": 590573,
+    "url": "https://example.com/taobao/4/5"
+  },
+  {
+    "platform": "douyin_ec",
+    "title": "奥特曼正版授权笔袋大容量学生文具盒",
+    "price": 29.88,
+    "shop_name": "得力文具旗舰店",
+    "ip_name": "奥特曼",
+    "monthly_sales": 17748,
+    "revenue": 530310,
+    "url": "https://example.com/douyin_ec/31/4"
+  },
+  {
+    "platform": "taobao",
+    "title": "三丽鸥修正带大容量涂改带学生",
+    "price": 37.97,
+    "shop_name": "卡西欧旗舰店",
+    "ip_name": "三丽鸥",
+    "monthly_sales": 17546,
+    "revenue": 666222,
+    "url": "https://example.com/taobao/1/1"
+  },
+  {
+    "platform": "taobao",
+    "title": "三丽鸥桌面收纳盒学生文具收纳",
+    "price": 44.47,
+    "shop_name": "迪士尼文具旗舰店",
+    "ip_name": "三丽鸥",
+    "monthly_sales": 17446,
+    "revenue": 775824,
+    "url": "https://example.com/taobao/1/0"
+  },
+  {
+    "platform": "douyin_ec",
+    "title": "三丽鸥联名胶带手账装饰和纸胶带",
+    "price": 7.64,
+    "shop_name": "M&G精品文具店",
+    "ip_name": "三丽鸥",
+    "monthly_sales": 17297,
+    "revenue": 132149,
+    "url": "https://example.com/douyin_ec/1/5"
+  },
+  {
+    "platform": "douyin_ec",
+    "title": "美乐蒂文具套装礼盒学生开学礼物",
+    "price": 70.14,
+    "shop_name": "国誉文具旗舰店",
+    "ip_name": "美乐蒂",
+    "monthly_sales": 17268,
+    "revenue": 1211178,
+    "url": "https://example.com/douyin_ec/4/5"
+  },
+  {
+    "platform": "taobao",
+    "title": "三丽鸥手账本创意可爱笔记本子",
+    "price": 20.53,
+    "shop_name": "万代旗舰店",
+    "ip_name": "三丽鸥",
+    "monthly_sales": 17174,
+    "revenue": 352582,
+    "url": "https://example.com/taobao/1/11"
+  },
+  {
+    "platform": "jd",
+    "title": "三丽鸥便利贴套装卡通可爱便签纸",
+    "price": 81.89,
+    "shop_name": "IP潮玩文具店",
+    "ip_name": "三丽鸥",
+    "monthly_sales": 16856,
+    "revenue": 1380338,
+    "url": "https://example.com/jd/1/1"
+  },
+  {
+    "platform": "pdd",
+    "title": "美乐蒂桌面收纳盒学生文具收纳",
+    "price": 86.89,
+    "shop_name": "齐心文具旗舰店",
+    "ip_name": "美乐蒂",
+    "monthly_sales": 16714,
+    "revenue": 1452279,
+    "url": "https://example.com/pdd/4/0"
+  },
+  {
+    "platform": "douyin_ec",
+    "title": "蛋仔派对书立金属学生桌面书架",
+    "price": 56.15,
+    "shop_name": "猫太子旗舰店",
+    "ip_name": "蛋仔派对",
+    "monthly_sales": 16595,
+    "revenue": 931809,
+    "url": "https://example.com/douyin_ec/419/0"
+  },
+  {
+    "platform": "pdd",
+    "title": "玉桂狗文具套装礼盒学生开学礼物",
+    "price": 136.15,
+    "shop_name": "樱花文具旗舰店",
+    "ip_name": "玉桂狗",
+    "monthly_sales": 16349,
+    "revenue": 2225916,
+    "url": "https://example.com/pdd/7/5"
+  },
+  {
+    "platform": "douyin_ec",
+    "title": "美乐蒂卷笔刀创意可爱削笔器",
+    "price": 53.67,
+    "shop_name": "万代旗舰店",
+    "ip_name": "美乐蒂",
+    "monthly_sales": 16308,
+    "revenue": 875250,
+    "url": "https://example.com/douyin_ec/4/3"
+  },
+  {
+    "platform": "taobao",
+    "title": "三丽鸥文具套装礼盒学生开学礼物",
+    "price": 136.46,
+    "shop_name": "万代旗舰店",
+    "ip_name": "三丽鸥",
+    "monthly_sales": 16248,
+    "revenue": 2217202,
+    "url": "https://example.com/taobao/1/8"
+  },
+  {
+    "platform": "pdd",
+    "title": "玉桂狗贴纸手账素材装饰贴画",
+    "price": 55.1,
+    "shop_name": "国誉文具旗舰店",
+    "ip_name": "玉桂狗",
+    "monthly_sales": 16144,
+    "revenue": 889534,
+    "url": "https://example.com/pdd/7/3"
+  },
+  {
+    "platform": "douyin_ec",
+    "title": "迪士尼正版授权笔袋大容量学生文具盒",
+    "price": 51.2,
+    "shop_name": "斑马旗舰店",
+    "ip_name": "迪士尼",
+    "monthly_sales": 16109,
+    "revenue": 824781,
+    "url": "https://example.com/douyin_ec/254/5"
+  },
+  {
+    "platform": "douyin_ec",
+    "title": "美乐蒂正版授权笔袋大容量学生文具盒",
+    "price": 11.04,
+    "shop_name": "爱好文具旗舰店",
+    "ip_name": "美乐蒂",
+    "monthly_sales": 16104,
+    "revenue": 177788,
+    "url": "https://example.com/douyin_ec/4/6"
+  },
+  {
+    "platform": "douyin_ec",
+    "title": "美乐蒂修正带大容量涂改带学生",
+    "price": 46.21,
+    "shop_name": "万代旗舰店",
+    "ip_name": "美乐蒂",
+    "monthly_sales": 16012,
+    "revenue": 739915,
+    "url": "https://example.com/douyin_ec/4/4"
+  },
+  {
+    "platform": "douyin_ec",
+    "title": "蛋仔派对书立金属学生桌面书架",
+    "price": 19.25,
+    "shop_name": "猫太子旗舰店",
+    "ip_name": "蛋仔派对",
+    "monthly_sales": 15887,
+    "revenue": 305825,
+    "url": "https://example.com/douyin_ec/419/2"
+  },
+  {
+    "platform": "pdd",
+    "title": "迪士尼正版授权笔袋大容量学生文具盒",
+    "price": 60.34,
+    "shop_name": "卡通梦工厂",
+    "ip_name": "迪士尼",
+    "monthly_sales": 15863,
+    "revenue": 957173,
+    "url": "https://example.com/pdd/254/2"
+  },
+  {
+    "platform": "jd",
+    "title": "Chiikawa尺子套装学生直尺三角尺",
+    "price": 161.7,
+    "shop_name": "国潮文创旗舰店",
+    "ip_name": "Chiikawa",
+    "monthly_sales": 15847,
+    "revenue": 2562460,
+    "url": "https://example.com/jd/12/3"
+  },
+  {
+    "platform": "pdd",
+    "title": "Chiikawa卷笔刀创意可爱削笔器",
+    "price": 58.86,
+    "shop_name": "M&G精品文具店",
+    "ip_name": "Chiikawa",
+    "monthly_sales": 15796,
+    "revenue": 929753,
+    "url": "https://example.com/pdd/12/1"
+  },
+  {
+    "platform": "jd",
+    "title": "奥特曼尺子套装学生直尺三角尺",
+    "price": 137.57,
+    "shop_name": "斑马旗舰店",
+    "ip_name": "奥特曼",
+    "monthly_sales": 15767,
+    "revenue": 2169066,
+    "url": "https://example.com/jd/31/3"
+  },
+  {
+    "platform": "pdd",
+    "title": "三丽鸥文具套装礼盒学生开学礼物",
+    "price": 122.43,
+    "shop_name": "M&G精品文具店",
+    "ip_name": "三丽鸥",
+    "monthly_sales": 15746,
+    "revenue": 1927783,
+    "url": "https://example.com/pdd/1/6"
+  },
+  {
+    "platform": "taobao",
+    "title": "奥特曼书签金属创意卡通书签",
+    "price": 74.37,
+    "shop_name": "真彩文具旗舰店",
+    "ip_name": "奥特曼",
+    "monthly_sales": 15668,
+    "revenue": 1165229,
+    "url": "https://example.com/taobao/31/3"
+  },
+  {
+    "platform": "jd",
+    "title": "三丽鸥联名中性笔按动黑色水笔套装",
+    "price": 108.05,
+    "shop_name": "迪士尼文具旗舰店",
+    "ip_name": "三丽鸥",
+    "monthly_sales": 15660,
+    "revenue": 1692063,
+    "url": "https://example.com/jd/1/3"
+  },
+  {
+    "platform": "jd",
+    "title": "库洛米尺子套装学生直尺三角尺",
+    "price": 132.7,
+    "shop_name": "百乐旗舰店",
+    "ip_name": "库洛米",
+    "monthly_sales": 15623,
+    "revenue": 2073172,
+    "url": "https://example.com/jd/2/5"
+  },
+  {
+    "platform": "taobao",
+    "title": "三丽鸥卷笔刀创意可爱削笔器",
+    "price": 25.57,
+    "shop_name": "二次元文具集合店",
+    "ip_name": "三丽鸥",
+    "monthly_sales": 15609,
+    "revenue": 399122,
+    "url": "https://example.com/taobao/1/6"
+  },
+  {
+    "platform": "taobao",
+    "title": "玉桂狗书签金属创意卡通书签",
+    "price": 79.34,
+    "shop_name": "卡通梦工厂",
+    "ip_name": "玉桂狗",
+    "monthly_sales": 15608,
+    "revenue": 1238339,
+    "url": "https://example.com/taobao/7/1"
+  },
+  {
+    "platform": "jd",
+    "title": "迪士尼正版授权笔袋大容量学生文具盒",
+    "price": 10.77,
+    "shop_name": "爱好文具旗舰店",
+    "ip_name": "迪士尼",
+    "monthly_sales": 15504,
+    "revenue": 166978,
+    "url": "https://example.com/jd/254/10"
+  },
+  {
+    "platform": "jd",
+    "title": "玉桂狗便利贴套装卡通可爱便签纸",
+    "price": 165.45,
+    "shop_name": "百乐旗舰店",
+    "ip_name": "玉桂狗",
+    "monthly_sales": 15448,
+    "revenue": 2555872,
+    "url": "https://example.com/jd/7/0"
+  }
+]

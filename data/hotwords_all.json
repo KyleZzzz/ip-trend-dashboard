@@ -11,6 +11,17 @@
     "trending_count": 0
   },
   {
+    "id": 61,
+    "name": "JOJO",
+    "name_en": "",
+    "category": "日本动漫",
+    "total_views": 44344100,
+    "total_videos": 2000,
+    "total_likes": 1234137,
+    "search_index": 100.0,
+    "trending_count": 0
+  },
+  {
     "id": 418,
     "name": "原神",
     "name_en": "",
@@ -73,6 +84,17 @@
     "total_views": 32728954,
     "total_videos": 1959,
     "total_likes": 2572750,
+    "search_index": 100.0,
+    "trending_count": 0
+  },
+  {
+    "id": 55,
+    "name": "我推的孩子",
+    "name_en": "",
+    "category": "日本动漫",
+    "total_views": 30775297,
+    "total_videos": 2000,
+    "total_likes": 789385,
     "search_index": 100.0,
     "trending_count": 0
   },
@@ -143,6 +165,17 @@
     "trending_count": 1
   },
   {
+    "id": 164,
+    "name": "怪化猫",
+    "name_en": "",
+    "category": "日本动漫",
+    "total_views": 24297917,
+    "total_videos": 2000,
+    "total_likes": 414572,
+    "search_index": 100.0,
+    "trending_count": 0
+  },
+  {
     "id": 420,
     "name": "王者荣耀",
     "name_en": "",
@@ -152,6 +185,17 @@
     "total_likes": 1765663,
     "search_index": 100.0,
     "trending_count": 1
+  },
+  {
+    "id": 193,
+    "name": "假面骑士",
+    "name_en": "",
+    "category": "日本动漫",
+    "total_views": 22281447,
+    "total_videos": 2000,
+    "total_likes": 793423,
+    "search_index": 100.0,
+    "trending_count": 0
   },
   {
     "id": 32,
@@ -174,49 +218,5 @@
     "total_likes": 1493023,
     "search_index": 100.0,
     "trending_count": 1
-  },
-  {
-    "id": 18,
-    "name": "航海王",
-    "name_en": "",
-    "category": "日本动漫",
-    "total_views": 21160097,
-    "total_videos": 2000,
-    "total_likes": 502159,
-    "search_index": 100.0,
-    "trending_count": 0
-  },
-  {
-    "id": 26,
-    "name": "间谍过家家",
-    "name_en": "",
-    "category": "日本动漫",
-    "total_views": 19520746,
-    "total_videos": 1494,
-    "total_likes": 1291962,
-    "search_index": 92.5,
-    "trending_count": 0
-  },
-  {
-    "id": 416,
-    "name": "米大圈",
-    "name_en": "",
-    "category": "国潮",
-    "total_views": 19324339,
-    "total_videos": 1372,
-    "total_likes": 1615797,
-    "search_index": 100.0,
-    "trending_count": 0
-  },
-  {
-    "id": 21,
-    "name": "火影",
-    "name_en": "",
-    "category": "日本动漫",
-    "total_views": 19277736,
-    "total_videos": 1000,
-    "total_likes": 344462,
-    "search_index": 100.0,
-    "trending_count": 0
   }
 ]
